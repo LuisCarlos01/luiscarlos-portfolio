@@ -1,0 +1,153 @@
+name: Chore / Maintenance
+description: Report maintenance tasks, refactoring, or general improvements
+title: "[CHORE] "
+labels: ["chore", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the codebase! Use this template for maintenance tasks, refactoring, or general improvements.
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: Chore Type
+      description: What type of maintenance task is this?
+      options:
+        - Dependencies Update
+        - Documentation
+        - Code Refactoring
+        - Configuration Change
+        - Build/CI Improvement
+        - Performance Optimization
+        - Code Cleanup
+        - Tooling Enhancement
+        - Security Update
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: A clear and concise description of the maintenance task.
+      placeholder: Describe what needs to be done...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this task necessary? What problem does it solve?
+      placeholder: Explain why this needs to be done...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Changes
+      description: What files, components, or areas of the codebase will be affected?
+      placeholder: e.g., package.json, CI workflows, documentation files, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Will this task introduce any breaking changes?
+      options:
+        - "No - Non-breaking changes only"
+        - "Yes - Will require updates to existing code"
+        - "Maybe - Needs further investigation"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: If this is a dependency update, list the packages and versions.
+      placeholder: |
+        e.g.,
+        - next: 14.0.4 → 14.1.0
+        - framer-motion: 10.16.16 → 11.0.0
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Task Checklist
+      description: Break down the task into smaller subtasks.
+      placeholder: |
+        - [ ] Update package.json
+        - [ ] Run pnpm install
+        - [ ] Test locally
+        - [ ] Update documentation
+        - [ ] ...
+      render: markdown
+    validations:
+      required: false
+
+  - type: dropdown
+    id: testing-required
+    attributes:
+      label: Testing Required
+      description: What level of testing is needed for this change?
+      options:
+        - None - Configuration/Documentation only
+        - Basic - Visual inspection after changes
+        - Moderate - Test core functionality
+        - Extensive - Full regression testing
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback-plan
+    attributes:
+      label: Rollback Plan
+      description: How can we revert this change if something goes wrong?
+      placeholder: Describe how to rollback these changes...
+    validations:
+      required: false
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues
+      description: Link to any related issues or pull requests.
+      placeholder: |
+        e.g.,
+        - Fixes #123
+        - Related to #456
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the task here.
+      placeholder: Any other information that might be helpful...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched for similar tasks before creating this one
+          required: true
+        - label: I have provided all the information requested above
+          required: true
+        - label: This task will not negatively impact the user experience
+          required: true
