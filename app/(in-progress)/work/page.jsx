@@ -5,7 +5,7 @@ import { Transition } from '@/layout';
 export const metadata = {
   title: 'Work',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
+    'Explore the portfolio of Luis Carlos - Featured projects in mobile apps and web development built with React, React Native, and Next.js.',
 };
 
 export default function Work() {

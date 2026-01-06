@@ -1,18 +1,19 @@
+// TODO: Atualizar com suas redes sociais reais
 export const socialMedias = [
   {
-    href: 'https://www.awwwards.com/dennissnellenberg/',
-    title: 'Awwwards',
+    href: '#', // TODO: Seu GitHub
+    title: 'GitHub',
   },
   {
-    href: 'https://www.instagram.com/codebydennis/',
+    href: '#', // TODO: Seu LinkedIn
+    title: 'LinkedIn',
+  },
+  {
+    href: '#', // TODO: Seu Instagram (opcional)
     title: 'Instagram',
   },
   {
-    href: 'https://dribbble.com/dennissnellenberg',
-    title: 'Dribbble',
-  },
-  {
-    href: 'https://www.linkedin.com/in/dennissnellenberg/',
-    title: 'LinkedIn',
+    href: '#', // TODO: Seu Twitter/X (opcional)
+    title: 'Twitter',
   },
 ];

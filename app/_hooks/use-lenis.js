@@ -1,19 +1,26 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import Lenis from '@studio-freight/lenis';
 
 export function useLenis() {
+  const rafIdRef = useRef(null);
+
   useEffect(() => {
     const lenis = new Lenis();
 
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafIdRef.current = requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
+    rafIdRef.current = requestAnimationFrame(raf);
 
-    return () => cancelAnimationFrame(raf);
+    return () => {
+      if (rafIdRef.current) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
+      lenis.destroy();
+    };
   }, []);
 }
