@@ -347,3 +347,4 @@ Se você precisar de ajuda:
 ---
 
 **⚠️ LEMBRE-SE:** Secrets são criptografados mas devem ser tratados com cuidado. Nunca os exponha em logs ou código!
+

@@ -315,3 +315,4 @@ Scrollbar estilizada mantendo funcionalidade:
 ---
 
 _Última atualização: Janeiro 2026_
+

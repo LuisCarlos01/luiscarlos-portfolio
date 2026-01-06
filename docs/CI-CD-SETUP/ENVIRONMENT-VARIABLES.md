@@ -332,3 +332,4 @@ Se você precisar de ajuda:
 ---
 
 **⚠️ LEMBRE-SE**: NUNCA commite `.env.local` ou qualquer arquivo com secrets reais!
+

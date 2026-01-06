@@ -515,3 +515,4 @@ Após configurar CI/CD básico, considere:
 - 📦 [PNPM Docs](https://pnpm.io)
 
 Para problemas específicos, abra uma issue no repositório.
+
