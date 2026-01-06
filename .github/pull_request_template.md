@@ -125,16 +125,12 @@
 **Pontos de atenção:**
 
 -
--
-
-**Áreas que precisam de revisão especial:**
+- **Áreas que precisam de revisão especial:**
 
 -
--
+- ***
 
----
-
-**Checklist do Revisor:**
+  **Checklist do Revisor:**
 
 - [ ] O código está limpo e bem estruturado
 - [ ] A funcionalidade funciona como esperado
