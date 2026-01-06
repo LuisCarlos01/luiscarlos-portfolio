@@ -17,20 +17,20 @@ GitHub Secrets são variáveis de ambiente criptografadas que você pode usar em
 
 ### Obrigatórios para CI
 
-| Secret                                | Descrição                    | Onde obter                          |
-| ------------------------------------- | ---------------------------- | ----------------------------------- |
-| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`   | Cloud name do Cloudinary     | https://cloudinary.com/console      |
-| `VERCEL_TOKEN`                        | Token de acesso da Vercel    | https://vercel.com/account/tokens   |
-| `VERCEL_ORG_ID`                       | ID da organização Vercel     | Vercel Project Settings → General   |
-| `VERCEL_PROJECT_ID`                   | ID do projeto Vercel         | Vercel Project Settings → General   |
+| Secret                              | Descrição                 | Onde obter                        |
+| ----------------------------------- | ------------------------- | --------------------------------- |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloud name do Cloudinary  | https://cloudinary.com/console    |
+| `VERCEL_TOKEN`                      | Token de acesso da Vercel | https://vercel.com/account/tokens |
+| `VERCEL_ORG_ID`                     | ID da organização Vercel  | Vercel Project Settings → General |
+| `VERCEL_PROJECT_ID`                 | ID do projeto Vercel      | Vercel Project Settings → General |
 
 ### Opcionais
 
-| Secret                    | Descrição                | Uso                       |
-| ------------------------- | ------------------------ | ------------------------- |
-| `NEXT_PUBLIC_SITE_URL`    | URL do site              | Build e metadata          |
-| `NEXT_PUBLIC_GA_ID`       | Google Analytics ID      | Analytics                 |
-| `SENTRY_DSN`              | Sentry DSN               | Error tracking            |
+| Secret                 | Descrição           | Uso              |
+| ---------------------- | ------------------- | ---------------- |
+| `NEXT_PUBLIC_SITE_URL` | URL do site         | Build e metadata |
+| `NEXT_PUBLIC_GA_ID`    | Google Analytics ID | Analytics        |
+| `SENTRY_DSN`           | Sentry DSN          | Error tracking   |
 
 ## 🚀 Como Configurar
 
@@ -234,11 +234,11 @@ Para projetos maiores, considere usar **GitHub Environments**:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production  # Usa secrets do environment "production"
+    environment: production # Usa secrets do environment "production"
     steps:
       - name: Deploy
         env:
-          API_KEY: ${{ secrets.API_KEY }}  # Pega do environment "production"
+          API_KEY: ${{ secrets.API_KEY }} # Pega do environment "production"
 ```
 
 **Benefícios:**
