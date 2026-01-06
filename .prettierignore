@@ -4,3 +4,7 @@
 coverage
 dist
 node_modules
+
+# Documentation markdown files
+.github/README.md
+docs/**/*.md
