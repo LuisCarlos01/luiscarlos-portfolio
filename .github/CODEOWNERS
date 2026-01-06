@@ -1,0 +1,28 @@
+# Code Owners for Luis Carlos Portfolio
+# These owners will be automatically requested for review when a PR touches these files/directories
+
+# Default owners for everything in the repo
+* @luiscarlosvn
+
+# GitHub workflows and actions
+/.github/ @luiscarlosvn
+
+# Documentation
+/docs/ @luiscarlosvn
+*.md @luiscarlosvn
+
+# Configuration files
+*.json @luiscarlosvn
+*.js @luiscarlosvn
+*.config.js @luiscarlosvn
+
+# Core application files
+/app/ @luiscarlosvn
+
+# Styling and design
+*.css @luiscarlosvn
+*.styled.js @luiscarlosvn
+
+# Dependencies
+package.json @luiscarlosvn
+pnpm-lock.yaml @luiscarlosvn

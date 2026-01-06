@@ -1,0 +1,50 @@
+# Cursor AI files
+.cursor/
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Plans and prompts
+.cursor/plans/
+.cursor/prompts/
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment files
+.env.local
+.env*.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Husky
+.husky/
