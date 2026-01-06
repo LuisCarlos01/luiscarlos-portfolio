@@ -19,11 +19,12 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex items-center gap-8'>
           <ImageWrapper>
+            {/* TODO: Substituir pela sua foto de perfil no Cloudinary */}
             <CldImage
               src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
               className='rounded-full object-cover'
               fill={true}
-              alt='Dennis Snellenberg Profile Picture'
+              alt='Luis Carlos Profile Picture'
             />
           </ImageWrapper>
           <MainTitle>Let’s work</MainTitle>
@@ -54,24 +55,26 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <div>
-            <a href='mailto:info@dennissnellenberg.com'>
+            {/* TODO: Atualizar com seu email */}
+            <a href='mailto:seuemail@example.com'>
               <MagneticButton
                 variant='outline'
                 size='md'
                 className='w-full border-muted-foreground'
               >
-                info@dennissnellenberg.com
+                seuemail@example.com
               </MagneticButton>
             </a>
           </div>
           <div>
-            <a href='tel:+31627847430'>
+            {/* TODO: Atualizar com seu telefone ou remover */}
+            <a href='tel:+5511999999999'>
               <MagneticButton
                 variant='outline'
                 size='md'
                 className='w-full border-muted-foreground'
               >
-                +31 6 27 84 74 30
+                +55 11 99999-9999
               </MagneticButton>
             </a>
           </div>

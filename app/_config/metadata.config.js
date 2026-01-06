@@ -1,42 +1,44 @@
 /** @type {import('next').Metadata} */
 export const rootMetadata = {
-  metadataBase: new URL('https://dennis-snellenberg-portfolio.vercel.app/'),
+  // TODO: Atualizar metadataBase quando tiver domínio próprio
+  metadataBase: new URL('https://luiscarlos-portfolio.vercel.app/'),
   title: {
-    template: '%s | Dennis Snellenberg',
-    default: 'Dennis Snellenberg • Freelance Designer & Developer',
+    template: '%s | Luis Carlos',
+    default: 'Luis Carlos • Mobile & Frontend Developer',
   },
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
-  generator: 'Dennis Snellenberg',
-  applicationName: 'Dennis Snellenberg',
+    'Crafting seamless mobile experiences and modern web interfaces. Passionate about clean code, intuitive design, and bringing ideas to life through React, React Native, and Next.js.',
+  generator: 'Luis Carlos Vitoriano Neto',
+  applicationName: 'Luis Carlos Portfolio',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Design', 'Develope', 'Freelance'],
+  keywords: ['Mobile Developer', 'Frontend Developer', 'React', 'React Native', 'Next.js', 'JavaScript', 'TypeScript'],
   authors: [
-    { name: 'Ali Bagheri', url: 'https://www.github.com/alibagheri2079' },
+    { name: 'Luis Carlos Vitoriano Neto', url: 'https://github.com/luiscarlos' }, // TODO: Atualizar com seu GitHub real
   ],
-  creator: 'Ali Bagheri',
-  publisher: 'Ali Bagheri',
+  creator: 'Luis Carlos Vitoriano Neto',
+  publisher: 'Luis Carlos Vitoriano Neto',
   twitter: {
     card: 'summary_large_image',
-    title: 'Dennis Snellenberg',
+    title: 'Luis Carlos • Mobile & Frontend Developer',
     description:
-      'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
-    siteId: '1467726470533754880',
-    creator: '@AliBagheri2079',
-    creatorId: '1467726470533754880',
+      'Crafting seamless mobile experiences and modern web interfaces. Passionate about clean code, intuitive design, and bringing ideas to life.',
+    // TODO: Atualizar com suas credenciais do Twitter/X quando disponível
+    // siteId: 'SEU_SITE_ID',
+    // creator: '@seutwitter',
+    // creatorId: 'SEU_CREATOR_ID',
     images: {
-      url: 'https://dennis-snellenberg-portfolio.vercel.app/screenshot.png',
-      alt: 'Portfolio Screenshot',
+      url: 'https://luiscarlos-portfolio.vercel.app/screenshot.png', // TODO: Atualizar com screenshot real
+      alt: 'Luis Carlos Portfolio Screenshot',
     },
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
