@@ -10,9 +10,9 @@ import {
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Home',
+  title: 'Home | Dennis Snellenberg',
   description:
-    'Crafting seamless mobile experiences and modern web interfaces. Passionate about clean code, intuitive design, and bringing ideas to life through React, React Native, and Next.js.',
+    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
 };
 
 export default function Home() {

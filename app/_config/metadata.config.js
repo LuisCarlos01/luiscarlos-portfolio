@@ -23,8 +23,8 @@ export const rootMetadata = {
   authors: [
     {
       name: 'Luis Carlos Vitoriano Neto',
-      url: 'https://github.com/luiscarlos',
-    }, // TODO: Atualizar com seu GitHub real
+      url: 'https://github.com/LuisCarlos01',
+    },
   ],
   creator: 'Luis Carlos Vitoriano Neto',
   publisher: 'Luis Carlos Vitoriano Neto',

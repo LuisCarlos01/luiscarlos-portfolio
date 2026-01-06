@@ -5,7 +5,7 @@ import { Transition } from '@/layout';
 export const metadata = {
   title: 'About',
   description:
-    'Get to know Luis Carlos - Mobile & Frontend Developer passionate about creating seamless digital experiences with React, React Native, and Next.js.',
+    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
 };
 
 export default function About() {
