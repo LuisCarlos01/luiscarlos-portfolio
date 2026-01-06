@@ -5,6 +5,7 @@ Documentação completa sobre Integração Contínua e Deploy Contínuo deste pr
 ## 📚 Documentos Disponíveis
 
 ### [CI-CD-SETUP.md](./CI-CD-SETUP.md)
+
 **Guia completo de configuração do CI/CD**
 
 - Pré-requisitos e instalação
@@ -19,6 +20,7 @@ Documentação completa sobre Integração Contínua e Deploy Contínuo deste pr
 ---
 
 ### [PRODUCTION-CHECKLIST.md](./PRODUCTION-CHECKLIST.md)
+
 **Checklist passo a passo para ir para produção**
 
 - ✅ Pré-deploy checks
@@ -33,6 +35,7 @@ Documentação completa sobre Integração Contínua e Deploy Contínuo deste pr
 ---
 
 ### [ENVIRONMENT-VARIABLES.md](./ENVIRONMENT-VARIABLES.md)
+
 **Guia completo de variáveis de ambiente**
 
 - Diferença entre `.env.example` e `.env.local`
@@ -51,21 +54,24 @@ Documentação completa sobre Integração Contínua e Deploy Contínuo deste pr
 ### Para Novos Desenvolvedores
 
 1. **Clone o repositório**
+
    ```bash
    git clone <repo-url>
    cd dennis-snellenberg-portfolio
    ```
 
 2. **Configure o ambiente**
+
    ```bash
    # Copie o template de variáveis
    cp .env.example .env.local
-   
+
    # Edite com seus valores
    # Veja ENVIRONMENT-VARIABLES.md para detalhes
    ```
 
 3. **Instale dependências**
+
    ```bash
    pnpm install
    ```
@@ -80,6 +86,7 @@ Documentação completa sobre Integração Contínua e Deploy Contínuo deste pr
 Siga o guia completo: **[CI-CD-SETUP.md](./CI-CD-SETUP.md)**
 
 Resumo rápido:
+
 1. Configure secrets no GitHub (VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID)
 2. Configure branch protection na branch `main`
 3. Abra um PR de teste para validar
@@ -157,12 +164,14 @@ docs/CI-CD-SETUP/
 ## 🔗 Links Úteis
 
 ### Documentação do Projeto
+
 - [README Principal](../../README.md)
 - [Arquitetura](../arquitetura/ARCHITECTURE.md)
 - [ADRs](../adr/README.md)
 - [Personalização](../PERSONALIZACAO.md)
 
 ### Recursos Externos
+
 - [GitHub Actions Docs](https://docs.github.com/actions)
 - [Vercel Docs](https://vercel.com/docs)
 - [Next.js Deployment](https://nextjs.org/docs/deployment)
@@ -185,6 +194,7 @@ https://github.com/seu-usuario/dennis-snellenberg-portfolio/actions
 ```
 
 Badges no README principal mostram o status:
+
 - 🟢 Verde: Tudo funcionando
 - 🔴 Vermelho: Algum problema
 - 🟡 Amarelo: Em execução

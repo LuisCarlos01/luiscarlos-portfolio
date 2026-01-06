@@ -9,14 +9,14 @@
 
 ## Status Geral
 
-| Fase | Status |
-|------|--------|
-| Bug fixes | ✅ Concluído |
-| Metadados | ✅ Concluído |
+| Fase                | Status       |
+| ------------------- | ------------ |
+| Bug fixes           | ✅ Concluído |
+| Metadados           | ✅ Concluído |
 | Componentes visuais | ✅ Concluído |
-| Cloudinary | ⏳ Pendente |
-| Redes sociais | ⏳ Pendente |
-| Conteúdo real | ⏳ Pendente |
+| Cloudinary          | ⏳ Pendente  |
+| Redes sociais       | ⏳ Pendente  |
+| Conteúdo real       | ⏳ Pendente  |
 
 ---
 
@@ -44,12 +44,12 @@
 
 **Informações atualizadas:**
 
-| Campo | Valor |
-|-------|-------|
-| Nome | Luis Carlos Vitoriano Neto |
-| Título | Mobile & Frontend Developer |
-| Descrição | Crafting seamless mobile experiences and modern web interfaces... |
-| Keywords | Mobile Developer, Frontend Developer, React, React Native, Next.js |
+| Campo     | Valor                                                              |
+| --------- | ------------------------------------------------------------------ |
+| Nome      | Luis Carlos Vitoriano Neto                                         |
+| Título    | Mobile & Frontend Developer                                        |
+| Descrição | Crafting seamless mobile experiences and modern web interfaces...  |
+| Keywords  | Mobile Developer, Frontend Developer, React, React Native, Next.js |
 
 ### 3. Componentes Visuais Atualizados
 
@@ -142,16 +142,16 @@ http://localhost:3000
 
 ### O que esperar no teste:
 
-| Funcionalidade | Status |
-|----------------|--------|
-| Homepage | ✅ Funciona (imagens quebradas) |
-| Navegação | ✅ Funciona |
-| Menu mobile | ✅ Funciona |
-| Animações | ✅ Funciona |
-| Scroll suave | ✅ Funciona |
-| Preloader | ✅ Funciona (2s de loading) |
+| Funcionalidade             | Status                              |
+| -------------------------- | ----------------------------------- |
+| Homepage                   | ✅ Funciona (imagens quebradas)     |
+| Navegação                  | ✅ Funciona                         |
+| Menu mobile                | ✅ Funciona                         |
+| Animações                  | ✅ Funciona                         |
+| Scroll suave               | ✅ Funciona                         |
+| Preloader                  | ✅ Funciona (2s de loading)         |
 | Páginas About/Work/Contact | ✅ Funciona (mostram "In Progress") |
-| Página 404 | ✅ Funciona |
+| Página 404                 | ✅ Funciona                         |
 
 ### Imagens quebradas esperadas:
 
@@ -193,4 +193,4 @@ app/
 
 ---
 
-*Última atualização: Janeiro 2026*
+_Última atualização: Janeiro 2026_

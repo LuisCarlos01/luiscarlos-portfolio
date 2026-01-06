@@ -26,24 +26,24 @@ Architecture Decision Records (ADRs) são documentos curtos que capturam decisõ
 
 ### Decisões Herdadas (Novembro 2024)
 
-| ADR | Título | Status |
-|-----|--------|--------|
-| [ADR-001](ADR-001-nextjs-14-app-router.md) | Next.js 14 com App Router | Aceito |
-| [ADR-002](ADR-002-estilizacao-hibrida.md) | Estilização Híbrida: Tailwind CSS + Styled Components | Aceito |
-| [ADR-003](ADR-003-design-tokens-css-variables.md) | Design Tokens via CSS Variables | Aceito |
-| [ADR-004](ADR-004-animacoes-framer-motion-gsap.md) | Animações: Framer Motion + GSAP | Aceito |
-| [ADR-005](ADR-005-scroll-suave-lenis.md) | Scroll Suave via Lenis | Aceito |
-| [ADR-006](ADR-006-midia-cloudinary.md) | Gerenciamento de Mídia via Cloudinary | Aceito |
-| [ADR-007](ADR-007-tipografia-font-local.md) | Tipografia: Font Local Customizada | Aceito |
-| [ADR-008](ADR-008-organizacao-pastas-underscore.md) | Organização de Pastas com Prefixo Underscore | Aceito |
-| [ADR-009](ADR-009-utilitario-classes-cva.md) | Utilitário de Classes: CVA + clsx + tailwind-merge | Aceito |
-| [ADR-010](ADR-010-tipagem-jsdoc.md) | Tipagem via JSDoc | Aceito |
-| [ADR-011](ADR-011-qualidade-codigo-linting.md) | Qualidade de Código: ESLint + Stylelint + Prettier + Husky | Aceito |
-| [ADR-012](ADR-012-package-manager-pnpm.md) | Package Manager: pnpm | Aceito |
+| ADR                                                 | Título                                                     | Status |
+| --------------------------------------------------- | ---------------------------------------------------------- | ------ |
+| [ADR-001](ADR-001-nextjs-14-app-router.md)          | Next.js 14 com App Router                                  | Aceito |
+| [ADR-002](ADR-002-estilizacao-hibrida.md)           | Estilização Híbrida: Tailwind CSS + Styled Components      | Aceito |
+| [ADR-003](ADR-003-design-tokens-css-variables.md)   | Design Tokens via CSS Variables                            | Aceito |
+| [ADR-004](ADR-004-animacoes-framer-motion-gsap.md)  | Animações: Framer Motion + GSAP                            | Aceito |
+| [ADR-005](ADR-005-scroll-suave-lenis.md)            | Scroll Suave via Lenis                                     | Aceito |
+| [ADR-006](ADR-006-midia-cloudinary.md)              | Gerenciamento de Mídia via Cloudinary                      | Aceito |
+| [ADR-007](ADR-007-tipografia-font-local.md)         | Tipografia: Font Local Customizada                         | Aceito |
+| [ADR-008](ADR-008-organizacao-pastas-underscore.md) | Organização de Pastas com Prefixo Underscore               | Aceito |
+| [ADR-009](ADR-009-utilitario-classes-cva.md)        | Utilitário de Classes: CVA + clsx + tailwind-merge         | Aceito |
+| [ADR-010](ADR-010-tipagem-jsdoc.md)                 | Tipagem via JSDoc                                          | Aceito |
+| [ADR-011](ADR-011-qualidade-codigo-linting.md)      | Qualidade de Código: ESLint + Stylelint + Prettier + Husky | Aceito |
+| [ADR-012](ADR-012-package-manager-pnpm.md)          | Package Manager: pnpm                                      | Aceito |
 
 ### Decisões Futuras
 
-*Novos ADRs serão adicionados aqui conforme o projeto evolui.*
+_Novos ADRs serão adicionados aqui conforme o projeto evolui._
 
 ---
 
@@ -79,14 +79,17 @@ Liste as alternativas avaliadas e por que não foram escolhidas.
 ## Consequências
 
 ### Positivas
+
 - Item 1
 - Item 2
 
 ### Negativas / Limitações
+
 - Item 1
 - Item 2
 
 ### Quando Revisar
+
 - Condição 1
 - Condição 2
 ```

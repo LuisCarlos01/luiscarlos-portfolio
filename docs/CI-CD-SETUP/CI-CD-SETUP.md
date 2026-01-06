@@ -59,6 +59,7 @@ vercel link
 ```
 
 Siga as instruções:
+
 - Confirme o escopo (seu usuário/organização)
 - Selecione ou crie um projeto
 - Confirme o diretório
@@ -90,16 +91,19 @@ Isso criará o arquivo `.vercel/project.json` com:
 4. Adicione os seguintes secrets:
 
 #### VERCEL_TOKEN
+
 ```
 Valor: <token copiado do passo 2>
 ```
 
 #### VERCEL_ORG_ID
+
 ```
 Valor: <orgId do .vercel/project.json>
 ```
 
 #### VERCEL_PROJECT_ID
+
 ```
 Valor: <projectId do .vercel/project.json>
 ```
@@ -116,13 +120,13 @@ Branch name pattern: main
 ✓ Require a pull request before merging
   ✓ Require approvals: 1
   ✓ Dismiss stale pull request approvals when new commits are pushed
-  
+
 ✓ Require status checks to pass before merging
   ✓ Require branches to be up to date before merging
   Status checks required:
     - Quality Checks
     - Build Validation
-    
+
 ✓ Require conversation resolution before merging
 
 ✓ Require linear history
@@ -174,10 +178,11 @@ git push origin feature/nova-funcionalidade
 ### CI Workflow (`.github/workflows/ci.yml`)
 
 #### Triggers
+
 ```yaml
 on:
   push:
-    branches: ['**']  # Todas as branches
+    branches: ['**'] # Todas as branches
   pull_request:
     branches: [main, develop]
 ```
@@ -185,6 +190,7 @@ on:
 #### Jobs
 
 **1. Quality Checks**
+
 - Setup PNPM e Node.js (matriz: 18.x, 20.x)
 - Instalar dependências com cache
 - Rodar ESLint
@@ -192,6 +198,7 @@ on:
 - Verificar formatação Prettier
 
 **2. Build Validation**
+
 - Depende de Quality Checks
 - Setup PNPM e Node.js (matriz: 18.x, 20.x)
 - Build de produção
@@ -199,12 +206,14 @@ on:
 - Upload de build artifacts (Node 20.x)
 
 #### Tempo estimado
+
 - ~2-3 minutos em branches com cache
 - ~4-5 minutos no primeiro run
 
 ### CD Workflow (`.github/workflows/cd.yml`)
 
 #### Triggers
+
 ```yaml
 on:
   push:
@@ -216,10 +225,12 @@ on:
 #### Jobs
 
 **1. Wait for CI**
+
 - Aguarda CI passar completamente
 - Usa `lewagon/wait-on-check-action`
 
 **2. Deploy Preview (apenas PRs)**
+
 - Setup ambiente
 - Pull configurações do Vercel (preview)
 - Build com Vercel CLI
@@ -227,6 +238,7 @@ on:
 - Comenta URL no PR
 
 **3. Deploy Production (apenas main)**
+
 - Setup ambiente
 - Pull configurações do Vercel (production)
 - Build com Vercel CLI
@@ -234,6 +246,7 @@ on:
 - Cria summary do deployment
 
 #### Tempo estimado
+
 - Preview: ~3-4 minutos
 - Production: ~3-4 minutos
 
@@ -249,10 +262,12 @@ O Dependabot verifica atualizações:
 ### Estratégia de Updates
 
 **Agrupamento inteligente:**
+
 - Minor e patch updates são agrupados em um único PR
 - Major updates geram PRs separados
 
 **Ignorados (requerem revisão manual):**
+
 - Next.js major versions
 - React major versions
 - React-DOM major versions
@@ -354,7 +369,7 @@ O cache do PNPM está configurado para economizar tempo:
 - uses: actions/setup-node@v4
   with:
     node-version: ${{ matrix.node-version }}
-    cache: 'pnpm'  # ← Cache automático
+    cache: 'pnpm' # ← Cache automático
 ```
 
 ### Build Artifacts
@@ -450,12 +465,14 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=seu-cloud-name-real
 Configurar em **Project Settings** → **Environment Variables**:
 
 **Production:**
+
 ```
 NEXT_PUBLIC_SITE_URL=https://seu-dominio.com
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
 ```
 
 **Preview:**
+
 ```
 NEXT_PUBLIC_SITE_URL=auto  # Vercel detecta automaticamente
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name

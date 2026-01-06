@@ -8,6 +8,7 @@
 ## Contexto
 
 O projeto precisa de algum nível de tipagem para:
+
 - Documentar props de componentes
 - Autocompletar no editor (IntelliSense)
 - Detectar erros básicos de tipo
@@ -22,12 +23,13 @@ Manter **JavaScript** com tipagem via **comentários JSDoc**, utilizando `jsconf
 ### Evidências no código:
 
 **Configuração (`jsconfig.json`):**
+
 ```json
 {
   "compilerOptions": {
     "paths": {
       "@/components": ["./app/_components/index.js"],
-      "@/hooks": ["./app/_hooks/index.js"],
+      "@/hooks": ["./app/_hooks/index.js"]
       // ...
     }
   }
@@ -35,6 +37,7 @@ Manter **JavaScript** com tipagem via **comentários JSDoc**, utilizando `jsconf
 ```
 
 **JSDoc em Componentes (`app/_layout/transition/index.jsx`):**
+
 ```javascript
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function Transition({ children }) {
@@ -43,6 +46,7 @@ export function Transition({ children }) {
 ```
 
 **JSDoc em Hooks (`app/_hooks/use-magnetic.js`):**
+
 ```javascript
 /** @param {import('react').MutableRefObject<HTMLButtonElement>} element */
 export function useMagnetic(element) {
@@ -54,6 +58,7 @@ const handleMagneticMove = useCallback(/* ... */);
 ```
 
 **JSDoc com Metadata do Next.js:**
+
 ```javascript
 /** @type {import('next').Metadata} */
 export const metadata = {
@@ -65,21 +70,25 @@ export const metadata = {
 ## Alternativas Consideradas
 
 ### 1. TypeScript completo (.tsx)
+
 - **Prós:** Melhor type-safety, erros em compile-time, refactoring mais seguro
 - **Contras:** Setup adicional, curva de aprendizado, possíveis conflitos com libs
 - **Por que não:** JSDoc oferece boa parte dos benefícios com menos complexidade
 
 ### 2. JavaScript sem tipagem
+
 - **Prós:** Máxima simplicidade
 - **Contras:** Sem autocompletar, erros descobertos só em runtime
 - **Por que não:** Perda significativa de DX
 
 ### 3. Flow (Facebook)
+
 - **Prós:** Gradual typing como JSDoc
 - **Contras:** Ecossistema menor, menos suporte de editores
 - **Por que não:** TypeScript/JSDoc é o padrão da indústria
 
 ### 4. PropTypes (runtime)
+
 - **Prós:** Validação em runtime, documentação
 - **Contras:** Overhead de runtime, deprecated para novos projetos
 - **Por que não:** JSDoc oferece melhor DX sem runtime cost
@@ -87,6 +96,7 @@ export const metadata = {
 ## Consequências
 
 ### Positivas
+
 - Zero build step adicional para tipos
 - Autocompletar funciona no VS Code/Cursor
 - Imports de tipos do React/Next.js funcionam
@@ -95,6 +105,7 @@ export const metadata = {
 - Arquivos menores que equivalentes TypeScript
 
 ### Negativas / Limitações
+
 - Menos rigoroso que TypeScript
 - Sintaxe JSDoc é mais verbosa
 - Alguns padrões avançados de tipos são difíceis/impossíveis
@@ -103,6 +114,7 @@ export const metadata = {
 - Comunidade tende a preferir TypeScript
 
 ### Quando Revisar
+
 - Se erros de tipo se tornarem frequentes em produção
 - Ao escalar a equipe (TypeScript é mais familiar)
 - Quando precisar de tipos mais complexos (generics, unions)

@@ -8,6 +8,7 @@
 ## Contexto
 
 O portfolio exibe muitas imagens e vídeos que precisam de:
+
 - Otimização automática de formato e qualidade
 - Responsividade (diferentes tamanhos para diferentes telas)
 - Carregamento rápido (CDN global)
@@ -23,11 +24,13 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 ### Evidências no código:
 
 **Package (`package.json`):**
+
 ```json
 "next-cloudinary": "^5.13.0"
 ```
 
 **Componente de Imagem (`app/_layout/header/index.jsx`):**
+
 ```jsx
 <CldImage
   src='Dennis-Portfolio/images/lapetmmek4fymz68m4u8'
@@ -39,6 +42,7 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 ```
 
 **Componente de Vídeo (`app/_layout/project/slider.jsx`):**
+
 ```jsx
 <CldVideoPlayer
   src={source}
@@ -50,6 +54,7 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 ```
 
 **Dados de Mídia (`app/_data/project-options.js`):**
+
 ```javascript
 {
   type: 'image',
@@ -60,21 +65,25 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 ## Alternativas Consideradas
 
 ### 1. Next.js Image Optimization (local)
+
 - **Prós:** Incluído no Next.js, sem dependência externa
 - **Contras:** Apenas imagens, sem vídeos, precisa hospedar arquivos
 - **Por que não:** Cloudinary oferece muito mais recursos
 
 ### 2. AWS S3 + CloudFront
+
 - **Prós:** Controle total, preços competitivos para alto volume
 - **Contras:** Configuração complexa, sem otimização automática
 - **Por que não:** Cloudinary é mais simples para portfolios
 
 ### 3. Imgix
+
 - **Prós:** Excelente para imagens, API rica
 - **Contras:** Não processa vídeos, menos integrações React
 - **Por que não:** Cloudinary suporta imagens e vídeos
 
 ### 4. Arquivos locais no `/public`
+
 - **Prós:** Simples, sem dependência externa
 - **Contras:** Sem otimização, aumenta tamanho do deploy, sem CDN
 - **Por que não:** Portfolio precisa de performance profissional
@@ -82,6 +91,7 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 ## Consequências
 
 ### Positivas
+
 - Otimização automática de imagens (formato, qualidade, tamanho)
 - CDN global para entrega rápida
 - Suporte a vídeos com player customizado
@@ -91,6 +101,7 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 - Formatos modernos (WebP, AVIF) automaticamente
 
 ### Negativas / Limitações
+
 - Dependência de serviço externo
 - Custos podem escalar com tráfego alto
 - Assets ficam fora do controle de versão
@@ -98,6 +109,7 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 - Vendor lock-in nos IDs das imagens
 
 ### Quando Revisar
+
 - Ao migrar assets para conta própria do Cloudinary
 - Se custos se tornarem proibitivos
 - Quando Next.js Image melhorar suporte a vídeos

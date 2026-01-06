@@ -8,6 +8,7 @@
 ## Contexto
 
 O projeto usa Tailwind CSS extensivamente e precisa de:
+
 - Composição de classes de forma organizada
 - Variantes de componentes (tamanhos, cores, estados)
 - Resolução de conflitos entre classes Tailwind
@@ -18,6 +19,7 @@ Classes Tailwind podem ficar longas e difíceis de gerenciar sem ferramentas apr
 ## Decisão
 
 Utilizar uma combinação de três bibliotecas complementares:
+
 1. **CVA (Class Variance Authority)**: Definir variantes de componentes
 2. **clsx**: Composição condicional de classes
 3. **tailwind-merge**: Resolver conflitos de classes Tailwind
@@ -25,6 +27,7 @@ Utilizar uma combinação de três bibliotecas complementares:
 ### Evidências no código:
 
 **Função `cn` (`app/_utils/helpers/class-name.js`):**
+
 ```javascript
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -35,6 +38,7 @@ export function cn(...inputs) {
 ```
 
 **CVA para Variantes (`app/_components/common/button/magnetic/index.variance.js`):**
+
 ```javascript
 import { cva } from 'class-variance-authority';
 
@@ -62,6 +66,7 @@ export const magneticVariance = cva(
 ```
 
 **Uso no Componente:**
+
 ```jsx
 <motion.button
   className={cn(magneticVariance({ variant, size, className }))}
@@ -72,21 +77,25 @@ export const magneticVariance = cva(
 ## Alternativas Consideradas
 
 ### 1. Apenas clsx/classnames
+
 - **Prós:** Simples, leve
 - **Contras:** Não resolve conflitos de Tailwind, sem sistema de variantes
 - **Por que não:** Não é suficiente para componentes complexos
 
 ### 2. Apenas tailwind-merge
+
 - **Prós:** Resolve conflitos perfeitamente
 - **Contras:** Sintaxe menos elegante para condicionais
 - **Por que não:** clsx oferece melhor DX para condicionais
 
 ### 3. Stitches ou Vanilla Extract
+
 - **Prós:** Type-safe, variantes nativas
 - **Contras:** Não integram bem com Tailwind
 - **Por que não:** Projeto já usa Tailwind extensivamente
 
 ### 4. Tailwind Variants
+
 - **Prós:** Combina CVA + tailwind-merge em uma lib
 - **Contras:** Menos controle granular
 - **Por que não:** Bibliotecas separadas oferecem mais flexibilidade
@@ -94,6 +103,7 @@ export const magneticVariance = cva(
 ## Consequências
 
 ### Positivas
+
 - `cn()` é o padrão de facto para projetos Tailwind/React
 - CVA torna variantes de componentes declarativas e organizadas
 - tailwind-merge evita conflitos como `p-2 p-4` → `p-4`
@@ -102,12 +112,14 @@ export const magneticVariance = cva(
 - Composição limpa: `cn(baseClasses, conditionalClasses, className)`
 
 ### Negativas / Limitações
+
 - Três dependências para gerenciar classes
 - tailwind-merge precisa conhecer a config do Tailwind (customizações)
 - Pequeno overhead de runtime para processar classes
 - CVA adiciona abstração que nem todos conhecem
 
 ### Quando Revisar
+
 - Se Tailwind v4 trouxer solução nativa para conflitos
 - Ao considerar bibliotecas como tailwind-variants
 - Se performance de renderização for um problema

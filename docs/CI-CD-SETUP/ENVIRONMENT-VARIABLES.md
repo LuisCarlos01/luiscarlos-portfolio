@@ -132,16 +132,18 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name_here
 ### ✅ Boas Práticas
 
 1. **NUNCA commitar `.env.local`**
+
    ```bash
    # Verificar se está no .gitignore
    cat .gitignore | grep ".env*.local"
    ```
 
 2. **Usar prefixo `NEXT_PUBLIC_` para variáveis do cliente**
+
    ```env
    # ✅ Exposta no browser (OK para valores públicos)
    NEXT_PUBLIC_SITE_URL=https://example.com
-   
+
    # ❌ NÃO exposta (use para secrets)
    API_SECRET_KEY=secret123
    ```
@@ -235,6 +237,7 @@ https://vercel.com/seu-usuario/seu-projeto/settings/environment-variables
 ### 3. Redeploy
 
 Após adicionar variáveis:
+
 - Preview: Abra novo PR ou force push
 - Production: Novo deploy ou redeploy manual
 
@@ -258,10 +261,10 @@ console.log(process.env.NEXT_PUBLIC_SITE_URL)
 
 ```javascript
 // ❌ Errado: sem NEXT_PUBLIC_
-const url = process.env.SITE_URL  // undefined no browser
+const url = process.env.SITE_URL; // undefined no browser
 
 // ✅ Correto: com NEXT_PUBLIC_
-const url = process.env.NEXT_PUBLIC_SITE_URL  // funciona!
+const url = process.env.NEXT_PUBLIC_SITE_URL; // funciona!
 ```
 
 ### Mudanças não aparecem

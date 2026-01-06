@@ -8,6 +8,7 @@
 ## Contexto
 
 O Next.js App Router trata cada pasta dentro de `/app` como uma potencial rota. O projeto precisa de:
+
 - Separação clara entre código de rotas e código de infraestrutura
 - Organização lógica de componentes, hooks, utils, etc.
 - Evitar que pastas de código sejam interpretadas como rotas
@@ -20,6 +21,7 @@ Utilizar **prefixo underscore** (`_`) para pastas que contêm código de infraes
 ### Evidências no código:
 
 **Estrutura de Pastas:**
+
 ```
 app/
 ├── _components/     # Componentes reutilizáveis
@@ -38,13 +40,14 @@ app/
 ```
 
 **Path Aliases (`jsconfig.json`):**
+
 ```json
 {
   "compilerOptions": {
     "paths": {
       "@/components": ["./app/_components/index.js"],
       "@/hooks": ["./app/_hooks/index.js"],
-      "@/layout": ["./app/_layout/index.js"],
+      "@/layout": ["./app/_layout/index.js"]
       // ...
     }
   }
@@ -54,21 +57,25 @@ app/
 ## Alternativas Consideradas
 
 ### 1. Pasta `/src` separada
+
 - **Prós:** Separação total entre código e rotas
 - **Contras:** Quebra a convenção do App Router, imports mais longos
 - **Por que não:** Underscore funciona nativamente com Next.js
 
 ### 2. Pasta `/components` na raiz
+
 - **Prós:** Convenção comum, fora do escopo de rotas
 - **Contras:** Perde a co-localização com o código da aplicação
 - **Por que não:** Preferência por manter tudo dentro de `/app`
 
 ### 3. Route Groups `(nome)` para tudo
+
 - **Prós:** Funcionalidade nativa do Next.js
 - **Contras:** Route groups são para organizar rotas, não código
 - **Por que não:** Semanticamente incorreto para código de infraestrutura
 
 ### 4. Nenhuma convenção especial
+
 - **Prós:** Simplicidade
 - **Contras:** Next.js tentaria criar rotas para cada pasta
 - **Por que não:** Causaria erros ou comportamentos inesperados
@@ -76,6 +83,7 @@ app/
 ## Consequências
 
 ### Positivas
+
 - Separação visual clara entre rotas e código de infraestrutura
 - Next.js ignora automaticamente pastas com `_`
 - Path aliases (`@/components`, etc.) tornam imports limpos
@@ -84,12 +92,14 @@ app/
 - Facilita onboarding de novos desenvolvedores
 
 ### Negativas / Limitações
+
 - Convenção não é universal (outros frameworks não usam `_`)
 - Pode parecer estranho para desenvolvedores de outros ecossistemas
 - Path aliases precisam de configuração no jsconfig/tsconfig
 - Se esquecer o `_`, pasta vira rota acidentalmente
 
 ### Quando Revisar
+
 - Se Next.js mudar a convenção de pastas privadas
 - Ao migrar para monorepo (pode precisar de `/packages`)
 - Se a equipe preferir convenção diferente (ex: `/src`)

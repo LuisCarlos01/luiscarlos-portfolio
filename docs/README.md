@@ -5,9 +5,11 @@ Bem-vindo à documentação completa do Luis Carlos Portfolio.
 ## 📂 Estrutura de Documentação
 
 ### 🏗️ [Arquitetura](./arquitetura/ARCHITECTURE.md)
+
 Visão geral da arquitetura do projeto, decisões técnicas e estrutura de pastas.
 
 ### 📝 [ADRs (Architecture Decision Records)](./adr/README.md)
+
 Registro de todas as decisões arquiteturais importantes do projeto:
 
 - [ADR-001: Next.js 14 App Router](./adr/ADR-001-nextjs-14-app-router.md)
@@ -24,6 +26,7 @@ Registro de todas as decisões arquiteturais importantes do projeto:
 - [ADR-012: Package Manager PNPM](./adr/ADR-012-package-manager-pnpm.md)
 
 ### 🚀 [CI/CD Setup](./CI-CD-SETUP/README.md)
+
 Documentação completa sobre Integração e Deploy Contínuos:
 
 - [Guia de Setup](./CI-CD-SETUP/CI-CD-SETUP.md)
@@ -31,15 +34,19 @@ Documentação completa sobre Integração e Deploy Contínuos:
 - [Variáveis de Ambiente](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md)
 
 ### 🎨 [UI/UX](./UI-UX/UI-UX.md)
+
 Guia de design, componentes e padrões visuais do projeto.
 
 ### 🗺️ [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md)
+
 Estrutura detalhada de diretórios e organização dos arquivos.
 
 ### 📋 [Briefing](./briefing/BRIEFING.md)
+
 Informações sobre o projeto, objetivos e contexto.
 
 ### ⚙️ [Personalização](./PERSONALIZACAO.md)
+
 Guia para personalizar o portfolio com suas informações.
 
 ## 🚀 Quick Links
@@ -108,6 +115,7 @@ docs/
 ## 🔍 Busca Rápida
 
 ### Stack Tecnológica
+
 - **Framework**: Next.js 14 ([ADR-001](./adr/ADR-001-nextjs-14-app-router.md))
 - **Linguagem**: JavaScript + JSDoc ([ADR-010](./adr/ADR-010-tipagem-jsdoc.md))
 - **Styling**: TailwindCSS + Styled Components ([ADR-002](./adr/ADR-002-estilizacao-hibrida.md))

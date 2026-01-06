@@ -26,10 +26,12 @@ This directory contains all GitHub-specific configuration for CI/CD, issue manag
 **Purpose**: Validate code quality and build on every push and PR.
 
 **Jobs**:
+
 - **Quality Checks**: ESLint, Stylelint, Prettier
 - **Build Validation**: Production build test
 
 **Runs on**:
+
 - All pushes to any branch
 - Pull requests to `main` and `develop`
 
@@ -40,6 +42,7 @@ This directory contains all GitHub-specific configuration for CI/CD, issue manag
 **Purpose**: Deploy to Vercel automatically.
 
 **Jobs**:
+
 - **Deploy Preview**: Create preview deployment for PRs
 - **Deploy Production**: Deploy to production on merge to `main`
 
@@ -50,6 +53,7 @@ This directory contains all GitHub-specific configuration for CI/CD, issue manag
 ### Bug Report (`bug_report.yml`)
 
 Structured template for reporting bugs with fields:
+
 - Bug description
 - Steps to reproduce
 - Expected vs actual behavior
@@ -59,6 +63,7 @@ Structured template for reporting bugs with fields:
 ### Feature Request (`feature_request.yml`)
 
 Template for suggesting new features with fields:
+
 - Feature description
 - Problem statement
 - Proposed solution
@@ -68,6 +73,7 @@ Template for suggesting new features with fields:
 ### Chore (`chore.yml`)
 
 Template for maintenance tasks with fields:
+
 - Task type (deps, docs, refactor, etc.)
 - Description and motivation
 - Scope of changes
@@ -98,6 +104,7 @@ Automated dependency updates configuration (`dependabot.yml`):
 - Auto-labels: `dependencies`, `automated`, `github-actions`
 
 **Ignored major updates** (require manual review):
+
 - Next.js
 - React
 - React-DOM
@@ -118,6 +125,7 @@ Defines code review assignments:
 ### First Time Setup
 
 1. **Configure GitHub Secrets** (Settings → Secrets):
+
    ```
    VERCEL_TOKEN
    VERCEL_ORG_ID
@@ -130,6 +138,7 @@ Defines code review assignments:
    - Require conversation resolution
 
 3. **Test the Workflows**:
+
    ```bash
    git checkout -b test/ci-cd
    echo "test" > TEST.md
@@ -147,6 +156,7 @@ Defines code review assignments:
 ### Daily Usage
 
 **Feature Development**:
+
 ```bash
 git checkout -b feature/my-feature
 # Make changes
@@ -156,6 +166,7 @@ git push origin feature/my-feature
 ```
 
 **Bug Fixes**:
+
 ```bash
 git checkout -b fix/bug-description
 # Fix the bug
@@ -208,7 +219,7 @@ For detailed setup instructions and troubleshooting:
    - Add screenshots for visual changes
    - Link related issues
 
-3. **Reviews**: 
+3. **Reviews**:
    - Test preview deployments
    - Check code quality
    - Verify responsiveness

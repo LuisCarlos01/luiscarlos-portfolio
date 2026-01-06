@@ -15,14 +15,10 @@
 
 <!-- Forneça um resumo claro e conciso das mudanças -->
 
-
-
 ## 🎯 Motivação e Contexto
 
 <!-- Por que essa mudança é necessária? Que problema ela resolve? -->
 <!-- Se ela fecha uma issue, adicione: Closes #123 -->
-
-
 
 ## 🧪 Como Testar
 
@@ -31,8 +27,8 @@
 1. Clone esta branch: `git checkout <branch-name>`
 2. Instale as dependências: `pnpm install`
 3. Execute o projeto: `pnpm dev`
-4. 
-5. 
+4.
+5.
 
 ## 📸 Screenshots / GIFs
 
@@ -120,8 +116,6 @@
 
 <!-- Qualquer informação adicional que os revisores devem saber -->
 
-
-
 ---
 
 ## 👀 Para os Revisores
@@ -129,16 +123,19 @@
 <!-- Orientações específicas para a revisão deste PR -->
 
 **Pontos de atenção:**
-- 
-- 
+
+-
+-
 
 **Áreas que precisam de revisão especial:**
-- 
-- 
+
+-
+-
 
 ---
 
 **Checklist do Revisor:**
+
 - [ ] O código está limpo e bem estruturado
 - [ ] A funcionalidade funciona como esperado
 - [ ] Não há problemas óbvios de performance

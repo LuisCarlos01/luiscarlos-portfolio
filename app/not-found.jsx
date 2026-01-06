@@ -3,8 +3,7 @@ import { Center } from '@/components';
 /** @type {import('next').Metadata} */
 export const metadata = {
   title: '404',
-  description:
-    'Page not found - Luis Carlos Portfolio',
+  description: 'Page not found - Luis Carlos Portfolio',
 };
 
 export default function NotFound() {

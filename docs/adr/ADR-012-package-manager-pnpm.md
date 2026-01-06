@@ -8,6 +8,7 @@
 ## Contexto
 
 O projeto precisa de um gerenciador de pacotes que ofereça:
+
 - Instalação rápida de dependências
 - Uso eficiente de espaço em disco
 - Lock file confiável
@@ -22,17 +23,18 @@ Utilizar **pnpm** como gerenciador de pacotes do projeto.
 **Lock file:** `pnpm-lock.yaml`
 
 **Dependências (`package.json`):**
+
 ```json
 {
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.16.16"
     // ...
   },
   "devDependencies": {
     "eslint": "^8",
-    "prettier": "^3.1.1",
+    "prettier": "^3.1.1"
     // ...
   }
 }
@@ -41,21 +43,25 @@ Utilizar **pnpm** como gerenciador de pacotes do projeto.
 ## Alternativas Consideradas
 
 ### 1. npm
+
 - **Prós:** Vem com Node.js, mais familiar, sem instalação extra
 - **Contras:** Mais lento, usa mais espaço em disco, hoisting problemático
 - **Por que não:** pnpm é significativamente mais eficiente
 
 ### 2. Yarn (Classic v1)
+
 - **Prós:** Mais rápido que npm, workspaces
 - **Contras:** Desenvolvimento desacelerado, yarn v1 está em modo de manutenção
 - **Por que não:** pnpm é mais moderno e eficiente
 
 ### 3. Yarn Berry (v2+)
+
 - **Prós:** PnP elimina node_modules, muito rápido
 - **Contras:** Plug'n'Play causa incompatibilidades, setup complexo
 - **Por que não:** Muitos pacotes não são compatíveis com PnP
 
 ### 4. Bun
+
 - **Prós:** Extremamente rápido, runtime + bundler + package manager
 - **Contras:** Ainda em desenvolvimento, menos maduro
 - **Por que não:** pnpm é mais estável e comprovado em produção
@@ -63,6 +69,7 @@ Utilizar **pnpm** como gerenciador de pacotes do projeto.
 ## Consequências
 
 ### Positivas
+
 - Instalação ~2x mais rápida que npm
 - Economia de disco via hard links (pacotes compartilhados)
 - Strict mode previne "phantom dependencies"
@@ -71,6 +78,7 @@ Utilizar **pnpm** como gerenciador de pacotes do projeto.
 - Compatible com npm registry (zero migração de pacotes)
 
 ### Negativas / Limitações
+
 - Requer instalação separada (`npm install -g pnpm`)
 - Alguns pacotes podem ter problemas com node_modules não-flat
 - Menos familiar para desenvolvedores acostumados com npm/yarn
@@ -78,6 +86,7 @@ Utilizar **pnpm** como gerenciador de pacotes do projeto.
 - Alguns scripts assumem estrutura de node_modules do npm
 
 ### Quando Revisar
+
 - Se Bun se tornar estável e adotado amplamente
 - Ao migrar para monorepo (pnpm workspaces são excelentes)
 - Se encontrar incompatibilidades frequentes com pacotes

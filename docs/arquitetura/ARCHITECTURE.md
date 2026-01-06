@@ -35,20 +35,20 @@ app/
 
 ### Convenções
 
-| Prefixo | Significado | Exemplo |
-|---------|-------------|---------|
-| `_` | Pasta privada (não é rota) | `_components/`, `_hooks/` |
-| `()` | Route group (agrupa rotas sem afetar URL) | `(in-progress)/` |
-| Nenhum | Rota pública | `page.jsx` → `/` |
+| Prefixo | Significado                               | Exemplo                   |
+| ------- | ----------------------------------------- | ------------------------- |
+| `_`     | Pasta privada (não é rota)                | `_components/`, `_hooks/` |
+| `()`    | Route group (agrupa rotas sem afetar URL) | `(in-progress)/`          |
+| Nenhum  | Rota pública                              | `page.jsx` → `/`          |
 
 ### Path Aliases
 
 Imports simplificados via `jsconfig.json`:
 
 ```javascript
-import { Button } from '@/components';  // → app/_components/index.js
-import { useMagnetic } from '@/hooks';  // → app/_hooks/index.js
-import { Header } from '@/layout';      // → app/_layout/index.js
+import { Button } from '@/components'; // → app/_components/index.js
+import { useMagnetic } from '@/hooks'; // → app/_hooks/index.js
+import { Header } from '@/layout'; // → app/_layout/index.js
 ```
 
 > **Referência:** [ADR-008 — Organização de Pastas](adr/ADR-008-organizacao-pastas-underscore.md)
@@ -84,26 +84,26 @@ flowchart TB
 
 ### Componentes Reutilizáveis (`_components/`)
 
-| Pasta | Propósito | Componentes |
-|-------|-----------|-------------|
-| `common/` | UI genéricos | Button, Magnetic |
-| `parallax/` | Efeitos de parallax | Fade, Reveal, Slider |
-| `stack/` | Layout utilities | Center, Overlay |
-| `svg/` | Ícones SVG | SVG wrapper |
-| `in-progress/` | Placeholder WIP | InProgress |
+| Pasta          | Propósito           | Componentes          |
+| -------------- | ------------------- | -------------------- |
+| `common/`      | UI genéricos        | Button, Magnetic     |
+| `parallax/`    | Efeitos de parallax | Fade, Reveal, Slider |
+| `stack/`       | Layout utilities    | Center, Overlay      |
+| `svg/`         | Ícones SVG          | SVG wrapper          |
+| `in-progress/` | Placeholder WIP     | InProgress           |
 
 ### Componentes de Layout (`_layout/`)
 
-| Pasta | Propósito | Subcomponentes |
-|-------|-----------|----------------|
-| `header/` | Cabeçalho animado | - |
-| `navbar/` | Navegação principal | Brand, List |
-| `offcanvas/` | Menu mobile | Toggle, Body, Links, Footer |
-| `contact/` | Seção de contato | SocialInfo, UserDetails |
-| `description/` | Seção de descrição | - |
-| `project/` | Seção de projetos | Slider |
-| `thumbnail/` | Grid de thumbnails | Action, Cursor, Label, List, Modal |
-| `transition/` | Transições de página | Preloader |
+| Pasta          | Propósito            | Subcomponentes                     |
+| -------------- | -------------------- | ---------------------------------- |
+| `header/`      | Cabeçalho animado    | -                                  |
+| `navbar/`      | Navegação principal  | Brand, List                        |
+| `offcanvas/`   | Menu mobile          | Toggle, Body, Links, Footer        |
+| `contact/`     | Seção de contato     | SocialInfo, UserDetails            |
+| `description/` | Seção de descrição   | -                                  |
+| `project/`     | Seção de projetos    | Slider                             |
+| `thumbnail/`   | Grid de thumbnails   | Action, Cursor, Label, List, Modal |
+| `transition/`  | Transições de página | Preloader                          |
 
 ### Padrões de Arquivos
 
@@ -138,25 +138,25 @@ O projeto **não utiliza estado global** (Redux, Zustand, Context API para estad
 
 ### Por que não há estado global?
 
-| Característica | Implicação |
-|----------------|------------|
-| Portfolio estático | Não há autenticação ou sessão de usuário |
-| Sem dados dinâmicos | Conteúdo definido em `_data/` |
-| Interações isoladas | Cada seção gerencia seu próprio estado |
+| Característica      | Implicação                               |
+| ------------------- | ---------------------------------------- |
+| Portfolio estático  | Não há autenticação ou sessão de usuário |
+| Sem dados dinâmicos | Conteúdo definido em `_data/`            |
+| Interações isoladas | Cada seção gerencia seu próprio estado   |
 
 ### Custom Hooks (`_hooks/`)
 
-| Hook | Propósito | Estado Gerenciado |
-|------|-----------|-------------------|
-| `use-dimensions` | Dimensões de elementos | `{ width, height }` |
-| `use-follow-pointer` | Cursor customizado | `{ x, y }` |
-| `use-magnetic` | Efeito magnético em botões | `{ x, y }` |
-| `use-lenis` | Scroll suave | Instância Lenis |
-| `use-offcanvas-toggle` | Menu mobile | `isOpen: boolean` |
-| `use-contact-slider` | Slider de contato | `activeIndex: number` |
-| `use-project-slider` | Slider de projetos | `activeIndex: number` |
-| `use-parallax-slider` | Slider parallax | `activeIndex: number` |
-| `use-time-out` | Timeouts controlados | `isComplete: boolean` |
+| Hook                   | Propósito                  | Estado Gerenciado     |
+| ---------------------- | -------------------------- | --------------------- |
+| `use-dimensions`       | Dimensões de elementos     | `{ width, height }`   |
+| `use-follow-pointer`   | Cursor customizado         | `{ x, y }`            |
+| `use-magnetic`         | Efeito magnético em botões | `{ x, y }`            |
+| `use-lenis`            | Scroll suave               | Instância Lenis       |
+| `use-offcanvas-toggle` | Menu mobile                | `isOpen: boolean`     |
+| `use-contact-slider`   | Slider de contato          | `activeIndex: number` |
+| `use-project-slider`   | Slider de projetos         | `activeIndex: number` |
+| `use-parallax-slider`  | Slider parallax            | `activeIndex: number` |
+| `use-time-out`         | Timeouts controlados       | `isComplete: boolean` |
 
 ### Providers (`_providers/`)
 
@@ -164,8 +164,12 @@ Os providers existentes não são para estado de aplicação, mas para funcional
 
 ```jsx
 <Providers>
-  <StyledComponentsRegistry>  {/* SSR para Styled Components */}
-    <BalancerProvider>        {/* Balanceamento de texto */}
+  <StyledComponentsRegistry>
+    {' '}
+    {/* SSR para Styled Components */}
+    <BalancerProvider>
+      {' '}
+      {/* Balanceamento de texto */}
       {children}
     </BalancerProvider>
   </StyledComponentsRegistry>
@@ -207,13 +211,13 @@ O projeto utiliza o **App Router** do Next.js 14 com roteamento baseado em arqui
 
 ### Rotas Disponíveis
 
-| Rota | Arquivo | Status |
-|------|---------|--------|
-| `/` | `app/page.jsx` | Ativo |
-| `/about` | `app/(in-progress)/about/page.jsx` | Em desenvolvimento |
-| `/work` | `app/(in-progress)/work/page.jsx` | Em desenvolvimento |
+| Rota       | Arquivo                              | Status             |
+| ---------- | ------------------------------------ | ------------------ |
+| `/`        | `app/page.jsx`                       | Ativo              |
+| `/about`   | `app/(in-progress)/about/page.jsx`   | Em desenvolvimento |
+| `/work`    | `app/(in-progress)/work/page.jsx`    | Em desenvolvimento |
 | `/contact` | `app/(in-progress)/contact/page.jsx` | Em desenvolvimento |
-| `*` | `app/not-found.jsx` | Ativo (404) |
+| `*`        | `app/not-found.jsx`                  | Ativo (404)        |
 
 ### Componentes de Navegação
 
@@ -274,8 +278,8 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <Providers>
-          <Offcanvas />  {/* Menu mobile sempre disponível */}
-          {children}     {/* Conteúdo da página */}
+          <Offcanvas /> {/* Menu mobile sempre disponível */}
+          {children} {/* Conteúdo da página */}
         </Providers>
       </body>
     </html>
@@ -340,4 +344,4 @@ flowchart TB
 
 ---
 
-*Última atualização: Janeiro 2026*
+_Última atualização: Janeiro 2026_

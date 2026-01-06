@@ -135,12 +135,12 @@ public/
 
 ## Legenda
 
-| Prefixo | Significado |
-|---------|-------------|
-| `_` | Pasta privada (não é rota do Next.js) |
-| `()` | Route group (agrupa rotas sem afetar URL) |
-| `.` | Arquivo/pasta de configuração oculta |
+| Prefixo | Significado                               |
+| ------- | ----------------------------------------- |
+| `_`     | Pasta privada (não é rota do Next.js)     |
+| `()`    | Route group (agrupa rotas sem afetar URL) |
+| `.`     | Arquivo/pasta de configuração oculta      |
 
 ---
 
-*Última atualização: Janeiro 2026*
+_Última atualização: Janeiro 2026_

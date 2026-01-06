@@ -95,11 +95,13 @@ Verificar em: `Project Settings → General`
 Ir em: `Project Settings → Environment Variables`
 
 #### Production
+
 - [ ] `NEXT_PUBLIC_SITE_URL` = URL de produção
 - [ ] `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` configurado
 - [ ] Outras variáveis necessárias adicionadas
 
 #### Preview
+
 - [ ] `NEXT_PUBLIC_SITE_URL` = `auto` (ou vazio)
 - [ ] Mesmas variáveis de produção (se aplicável)
 

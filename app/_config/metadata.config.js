@@ -11,9 +11,20 @@ export const rootMetadata = {
   generator: 'Luis Carlos Vitoriano Neto',
   applicationName: 'Luis Carlos Portfolio',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Mobile Developer', 'Frontend Developer', 'React', 'React Native', 'Next.js', 'JavaScript', 'TypeScript'],
+  keywords: [
+    'Mobile Developer',
+    'Frontend Developer',
+    'React',
+    'React Native',
+    'Next.js',
+    'JavaScript',
+    'TypeScript',
+  ],
   authors: [
-    { name: 'Luis Carlos Vitoriano Neto', url: 'https://github.com/luiscarlos' }, // TODO: Atualizar com seu GitHub real
+    {
+      name: 'Luis Carlos Vitoriano Neto',
+      url: 'https://github.com/luiscarlos',
+    }, // TODO: Atualizar com seu GitHub real
   ],
   creator: 'Luis Carlos Vitoriano Neto',
   publisher: 'Luis Carlos Vitoriano Neto',
