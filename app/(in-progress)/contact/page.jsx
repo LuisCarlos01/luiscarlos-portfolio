@@ -5,7 +5,7 @@ import { Transition } from '@/layout';
 export const metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Luis Carlos for mobile and frontend development projects. Let\'s build something amazing together.',
+    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
 };
 
 export default function Contact() {
