@@ -18,13 +18,14 @@ export function Header() {
     >
       <CldImage
         src='Portfolio/home/HeroSection'
-        className='object-contain'
+        className='object-contain object-bottom md:object-center'
         fill={true}
         sizes='100vw'
         quality='auto'
         format='auto'
         priority={true}
         alt='Luis Vitoriano - Hero Section Portfolio'
+        version={Date.now()}
       />
 
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
