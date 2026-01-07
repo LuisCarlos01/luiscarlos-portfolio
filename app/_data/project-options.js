@@ -27,8 +27,8 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      // Buffet MVP - Screenshot 1
-      source: 'Luis-Portfolio/images/buffet-1-placeholder',
+      // Buffet MVP - Slider 1 (about)
+      source: 'Buffet-mvp/about/Slider1',
     },
   ],
   second: [
@@ -49,8 +49,8 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      // Buffet MVP - Screenshot 2
-      source: 'Luis-Portfolio/images/buffet-2-placeholder',
+      // Buffet MVP - Slider 2 (cardapio)
+      source: 'Buffet-mvp/cardapio/Slider2',
     },
   ],
 };

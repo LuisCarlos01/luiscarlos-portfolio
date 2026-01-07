@@ -27,7 +27,6 @@ export const thumbnailOptions = [
   {
     href: 'https://buffet-tau.vercel.app/',
     title: 'Buffet MVP',
-    // TODO: Substituir pelo ID da imagem no Cloudinary
-    image: 'Luis-Portfolio/images/buffet-placeholder',
+    image: 'Buffet-mvp/hero/ThumbnailBuffet',
   },
 ];
