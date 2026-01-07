@@ -3,9 +3,9 @@ import { Transition } from '@/layout';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Work',
+  title: 'Work | Luis Vitoriano',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Luis',
+    'Portfolio of projects including dashboards, PWAs, landing pages, and mobile applications built with React, TypeScript, and React Native. © Code by Luis',
 };
 
 export default function Work() {

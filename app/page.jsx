@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: 'Home | Luis Vitoriano',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Luis',
+    'Front-End & Mobile Developer focused on building modern, scalable, and user-centric applications with React, TypeScript, and React Native. © Code by Luis',
 };
 
 export default function Home() {

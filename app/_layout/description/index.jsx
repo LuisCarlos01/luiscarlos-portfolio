@@ -9,7 +9,7 @@ import { MagneticButton, ParallaxFade, ParallaxReveal } from '@/components';
 import { Title, Wrapper } from './index.styled';
 
 const phrase =
-  'Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.';
+  'Front-End & Mobile Developer focused on building modern, scalable, and user-centric applications. Clean architecture, performance, and continuous learning.';
 
 export function Description() {
   return (
@@ -24,8 +24,9 @@ export function Description() {
         <div className='basis-7/12 lg:basis-3/12'>
           <ParallaxFade>
             <Balancer as='p' className='mt-2 text-base lg:text-lg'>
-              The combination of my passion for design, code & interaction
-              positions me in a unique place in the web design world.
+              Experienced with React, TypeScript, Vite, Tailwind CSS, and mobile
+              solutions using React Native. Passionate about UI/UX and
+              real-world projects.
             </Balancer>
           </ParallaxFade>
         </div>
