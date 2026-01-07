@@ -16,7 +16,7 @@ export const thumbnailOptions = [
   {
     href: 'https://stlvalley.com.br/',
     title: 'STL Valley',
-    image: 'STL-valley/Thumbnail',
+    image: 'STL-valley/hero/ThumbnailSTL',
   },
   {
     href: 'https://github.com/LuisCarlos01/LetxClub',
