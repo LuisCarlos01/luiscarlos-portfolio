@@ -114,3 +114,13 @@ Utilizar **Cloudinary** via **next-cloudinary** para gerenciamento e otimizaçã
 - Se custos se tornarem proibitivos
 - Quando Next.js Image melhorar suporte a vídeos
 - Ao considerar self-hosting para controle total
+
+## Implementação e Otimização
+
+Para detalhes completos sobre uso otimizado do Cloudinary no plano Free, incluindo:
+- Organização de pastas e nomenclatura
+- Estratégia de upload e transformações
+- Monitoramento de consumo
+- Boas práticas e erros comuns
+
+Consulte: **[Estratégia Cloudinary Free](../cloudinary/cloudinary-strategy.md)**

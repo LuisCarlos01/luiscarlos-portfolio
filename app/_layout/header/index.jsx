@@ -21,6 +21,9 @@ export function Header() {
         className='object-cover md:scale-125 md:object-contain'
         fill={true}
         sizes='100vw'
+        quality='auto'
+        format='auto'
+        priority={true}
         alt='Luis Vitoriano Personal Picture'
       />
 

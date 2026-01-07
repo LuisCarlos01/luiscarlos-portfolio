@@ -37,6 +37,13 @@ Documentação completa sobre Integração e Deploy Contínuos:
 - [Checklist de Produção](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md)
 - [Variáveis de Ambiente](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md)
 
+### ☁️ [Estratégia Cloudinary](./cloudinary/README.md)
+
+Guia completo de uso otimizado do Cloudinary no plano Free, incluindo organização de assets, transformações, monitoramento e boas práticas para minimizar consumo de créditos.
+
+- [Estratégia Cloudinary Free](./cloudinary/cloudinary-strategy.md)
+- [Sumário de Implementação](./cloudinary/cloudinary-implementation-summary.md)
+
 ### 🎨 [UI/UX](./UI-UX/UI-UX.md)
 
 Guia de design, componentes e padrões visuais do projeto.
@@ -66,6 +73,7 @@ Guia para personalizar o portfolio com suas informações.
 
 - **CI/CD**: [Workflows](./CI-CD-SETUP/README.md)
 - **Deploy**: [Production Checklist](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md)
+- **Cloudinary**: [Estratégia de Otimização](./cloudinary/README.md)
 - **Arquitetura**: [Architecture Overview](./arquitetura/ARCHITECTURE.md)
 - **Análise**: [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md)
 - **Decisões**: [ADRs](./adr/README.md)
@@ -79,13 +87,15 @@ Guia para personalizar o portfolio com suas informações.
 3. [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md) - Princípios e boas práticas
 4. [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md) - Onde está cada coisa
 5. [UI/UX](./UI-UX/UI-UX.md) - Padrões visuais
-6. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar ambiente
+6. [Estratégia Cloudinary](./cloudinary/cloudinary-strategy.md) - Otimização de mídia
+7. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar ambiente
 
 ### 2️⃣ Para Personalizar
 
 1. [Personalização](./PERSONALIZACAO.md) - Guia completo
-2. [Environment Variables](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md) - Configurar vars
-3. [Briefing](./briefing/BRIEFING.md) - Contexto do projeto
+2. [Estratégia Cloudinary](./cloudinary/cloudinary-strategy.md) - Upload e organização de imagens
+3. [Environment Variables](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md) - Configurar vars
+4. [Briefing](./briefing/BRIEFING.md) - Contexto do projeto
 
 ### 3️⃣ Para Deploy
 

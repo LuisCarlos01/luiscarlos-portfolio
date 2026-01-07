@@ -23,6 +23,9 @@ export function UserDetails({ transformX }) {
               src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
               className='rounded-full object-cover'
               fill={true}
+              quality='auto'
+              format='auto'
+              loading='lazy'
               alt='Luis Vitoriano Profile Picture'
             />
           </ImageWrapper>
