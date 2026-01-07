@@ -14,10 +14,9 @@ export const thumbnailOptions = [
     image: 'Luis-Portfolio/images/barall-placeholder',
   },
   {
-    href: 'https://github.com/samuelcsouza/STL-Valley-',
+    href: 'https://stlvalley.com.br/',
     title: 'STL Valley',
-    // TODO: Substituir pelo ID da imagem no Cloudinary
-    image: 'Luis-Portfolio/images/stl-valley-placeholder',
+    image: 'STL-valley/Thumbnail',
   },
   {
     href: 'https://github.com/LuisCarlos01/LetxClub',

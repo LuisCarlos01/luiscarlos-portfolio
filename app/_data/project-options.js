@@ -17,8 +17,8 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      // STL Valley - Screenshot 1
-      source: 'Luis-Portfolio/images/stl-valley-1-placeholder',
+      // STL Valley - Seção de Shows
+      source: 'STL-valley/Seção_de_Shows',
     },
     {
       type: 'image',
@@ -39,8 +39,8 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      // STL Valley - Screenshot 2
-      source: 'Luis-Portfolio/images/stl-valley-2-placeholder',
+      // STL Valley - Seção de Hospedagem
+      source: 'STL-valley/Seção_de_Hospedagem_sn4nu4',
     },
     {
       type: 'image',
