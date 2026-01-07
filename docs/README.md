@@ -8,6 +8,10 @@ Bem-vindo à documentação completa do Luis Carlos Portfolio.
 
 Visão geral da arquitetura do projeto, decisões técnicas e estrutura de pastas.
 
+### 🧠 [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md)
+
+Análise completa dos princípios arquiteturais aplicados, boas práticas, anti-patterns e recomendações para evolução do projeto.
+
 ### 📝 [ADRs (Architecture Decision Records)](./adr/README.md)
 
 Registro de todas as decisões arquiteturais importantes do projeto:
@@ -63,6 +67,7 @@ Guia para personalizar o portfolio com suas informações.
 - **CI/CD**: [Workflows](./CI-CD-SETUP/README.md)
 - **Deploy**: [Production Checklist](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md)
 - **Arquitetura**: [Architecture Overview](./arquitetura/ARCHITECTURE.md)
+- **Análise**: [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md)
 - **Decisões**: [ADRs](./adr/README.md)
 
 ## 📖 Ordem de Leitura Recomendada
@@ -71,9 +76,10 @@ Guia para personalizar o portfolio com suas informações.
 
 1. [README Principal](../README.md) - Visão geral
 2. [Arquitetura](./arquitetura/ARCHITECTURE.md) - Entender a estrutura
-3. [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md) - Onde está cada coisa
-4. [UI/UX](./UI-UX/UI-UX.md) - Padrões visuais
-5. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar ambiente
+3. [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md) - Princípios e boas práticas
+4. [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md) - Onde está cada coisa
+5. [UI/UX](./UI-UX/UI-UX.md) - Padrões visuais
+6. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar ambiente
 
 ### 2️⃣ Para Personalizar
 
@@ -97,6 +103,8 @@ docs/
 │   └── README.md
 ├── arquitetura/              # Documentação de arquitetura
 │   └── ARCHITECTURE.md
+├── analise-archsoftware/     # Análise arquitetural
+│   └── analise-arquitetural.md
 ├── briefing/                 # Briefing do projeto
 │   └── BRIEFING.md
 ├── CI-CD-SETUP/             # Documentação CI/CD
