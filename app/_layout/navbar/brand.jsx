@@ -16,7 +16,7 @@ export function NavbarBrand() {
         <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
           Luis
         </h5>
-        <h5 className='absolute left-16 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
+        <h5 className='absolute left-28 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
           Carlos Vitoriano
         </h5>
       </div>
