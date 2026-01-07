@@ -3,6 +3,7 @@
 **Propósito:** Este documento define as regras arquiteturais que devem ser seguidas em **TODAS** as implementações e refatorações do projeto.
 
 **Aplicação:** Obrigatório para:
+
 - ✅ Novas features
 - ✅ Refatorações de código
 - ✅ Correções de bugs que alterem estrutura
@@ -31,6 +32,7 @@ Antes de começar qualquer implementação, verificar:
 > **"É uma Landing Page, não um ERP"**
 
 **Regras:**
+
 - ✅ Começar pela solução mais simples
 - ✅ Abstrair apenas após 3ª repetição
 - ✅ Perguntar: "Isso é necessário AGORA ou futuro hipotético?"
@@ -48,7 +50,9 @@ export const navItems = [
 
 // ❌ EVITAR: Over-engineering
 class NavItemFactory {
-  createItem(href, title) { /* ... */ }
+  createItem(href, title) {
+    /* ... */
+  }
 }
 ```
 
@@ -58,15 +62,16 @@ class NavItemFactory {
 
 **Regras:**
 
-| Tipo de Código | Localização | Responsabilidade |
-|----------------|-------------|------------------|
-| **Dados estáticos** | `app/_data/` | Apenas dados, zero lógica |
-| **Lógica pura** | `app/_hooks/` ou `app/_utils/` | Funções testáveis, sem side effects |
-| **UI reutilizável** | `app/_components/` | Apresentação, sem lógica de negócio |
-| **Layout/seções** | `app/_layout/` | Composição, puramente apresentacional |
-| **Configuração** | `app/_config/` | Metadata, configurações globais |
+| Tipo de Código      | Localização                    | Responsabilidade                      |
+| ------------------- | ------------------------------ | ------------------------------------- |
+| **Dados estáticos** | `app/_data/`                   | Apenas dados, zero lógica             |
+| **Lógica pura**     | `app/_hooks/` ou `app/_utils/` | Funções testáveis, sem side effects   |
+| **UI reutilizável** | `app/_components/`             | Apresentação, sem lógica de negócio   |
+| **Layout/seções**   | `app/_layout/`                 | Composição, puramente apresentacional |
+| **Configuração**    | `app/_config/`                 | Metadata, configurações globais       |
 
 **NUNCA:**
+
 - ❌ Colocar lógica de negócio em componentes de layout
 - ❌ Colocar dados hardcoded em componentes
 - ❌ Misturar responsabilidades em um único arquivo
@@ -110,12 +115,12 @@ export function Header() {
 
 **Quando usar cada um:**
 
-| Situação | Solução |
-|----------|---------|
-| Estado de UI local (ex: menu aberto) | `useState` |
-| Lógica reutilizável (ex: scroll, animação) | Custom Hook (`_hooks/`) |
-| Provider técnico (ex: Styled Components) | Context API (`_providers/`) |
-| Estado compartilhado complexo | ❌ Não aplicar (landing page não precisa) |
+| Situação                                   | Solução                                   |
+| ------------------------------------------ | ----------------------------------------- |
+| Estado de UI local (ex: menu aberto)       | `useState`                                |
+| Lógica reutilizável (ex: scroll, animação) | Custom Hook (`_hooks/`)                   |
+| Provider técnico (ex: Styled Components)   | Context API (`_providers/`)               |
+| Estado compartilhado complexo              | ❌ Não aplicar (landing page não precisa) |
 
 ---
 
@@ -123,16 +128,16 @@ export function Header() {
 
 **Obrigatório seguir:**
 
-| Tipo | Convenção | Exemplo |
-|------|-----------|---------|
-| **Componentes** | PascalCase folders | `Button/`, `MagneticButton/` |
-| **Arquivo principal** | `index.jsx` | `Button/index.jsx` |
-| **Styled files** | `index.styled.js` | `Button/index.styled.js` |
-| **Variants** | `variants.js` | `Button/variants.js` |
-| **Hooks** | kebab-case, prefix `use-` | `use-magnetic.js`, `use-lenis.js` |
-| **Utils** | kebab-case | `class-name.js`, `random-id.js` |
-| **Data** | kebab-case | `nav-items.js`, `social-medias.js` |
-| **Subcomponents** | `components/` subfolder | `Button/components/` |
+| Tipo                  | Convenção                 | Exemplo                            |
+| --------------------- | ------------------------- | ---------------------------------- |
+| **Componentes**       | PascalCase folders        | `Button/`, `MagneticButton/`       |
+| **Arquivo principal** | `index.jsx`               | `Button/index.jsx`                 |
+| **Styled files**      | `index.styled.js`         | `Button/index.styled.js`           |
+| **Variants**          | `variants.js`             | `Button/variants.js`               |
+| **Hooks**             | kebab-case, prefix `use-` | `use-magnetic.js`, `use-lenis.js`  |
+| **Utils**             | kebab-case                | `class-name.js`, `random-id.js`    |
+| **Data**              | kebab-case                | `nav-items.js`, `social-medias.js` |
+| **Subcomponents**     | `components/` subfolder   | `Button/components/`               |
 
 **Barrel Exports:**
 
@@ -172,6 +177,7 @@ app/
 ```
 
 **Regras:**
+
 - ✅ Prefixo `_` para código privado (não é rota)
 - ✅ Route groups `()` para organizar rotas
 - ✅ Barrel exports em cada módulo
@@ -212,8 +218,8 @@ app/
 export function Navbar() {
   return (
     <nav>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
+      <Link href='/'>Home</Link>
+      <Link href='/about'>About</Link>
     </nav>
   );
 }
@@ -266,11 +272,13 @@ export function Navbar() {
 ### AP-04: Estado Global Desnecessário
 
 **❌ NUNCA usar para landing page:**
+
 - Redux
 - Zustand
 - Context API para estado de aplicação
 
 **✅ Usar apenas:**
+
 - `useState` local
 - Custom hooks (`_hooks/`)
 - Context API apenas para providers técnicos (Styled Components, Balancer)
@@ -371,6 +379,7 @@ export function Button({ variant, size, ...props }) {
 ```
 
 **Regra:** JSDoc é obrigatório para:
+
 - Props de componentes
 - Parâmetros de funções utilitárias
 - Retornos de hooks customizados
@@ -400,7 +409,7 @@ import { MagneticButton, DefaultButton } from '@/components';
 
 ```javascript
 const Project = dynamic(() => import('@/layout').then(mod => mod.Project), {
-  loading: () => <Skeleton />
+  loading: () => <Skeleton />,
 });
 ```
 
@@ -464,6 +473,7 @@ Antes de refatorar:
    - Podemos implementar sem dependência?
 
 3. **Avaliar impacto:**
+
    ```bash
    pnpm add [package]
    pnpm analyze  # Verificar bundle size
@@ -476,12 +486,14 @@ Antes de refatorar:
 ### Dependências Proibidas
 
 **NÃO adicionar sem justificativa técnica:**
+
 - State management (Redux, Zustand)
 - Backend frameworks (Express, Fastify)
 - ORMs (Prisma, TypeORM)
 - Test frameworks complexos (Jest com muitos plugins)
 
 **Preferir:**
+
 - Soluções nativas do Next.js
 - Bibliotecas leves e focadas
 - Ferramentas já no projeto
@@ -505,11 +517,11 @@ app/
 
 ### O que Testar
 
-| Tipo | Testar | Não Testar |
-|------|--------|------------|
-| **Hooks** | Lógica de cálculo, estados | Animações visuais |
-| **Utils** | Transformações, validações | Imports/exports |
-| **Components** | Lógica condicional | Estilos CSS |
+| Tipo           | Testar                     | Não Testar        |
+| -------------- | -------------------------- | ----------------- |
+| **Hooks**      | Lógica de cálculo, estados | Animações visuais |
+| **Utils**      | Transformações, validações | Imports/exports   |
+| **Components** | Lógica condicional         | Estilos CSS       |
 
 ### Stack Sugerida
 
@@ -530,12 +542,14 @@ app/
 ### Quando Documentar
 
 **Obrigatório:**
+
 - ✅ Mudanças arquiteturais → ADR
 - ✅ Adição de dependências significativas → ADR ou comentário
 - ✅ Hooks customizados → JSDoc completo
 - ✅ Funções utilitárias complexas → JSDoc
 
 **Opcional:**
+
 - Componentes simples (código auto-explicativo)
 - Utils triviais (ex: `const sum = (a, b) => a + b`)
 
@@ -551,12 +565,15 @@ app/
 - **Data:** [YYYY-MM-DD]
 
 ## Contexto
+
 [Por que esta decisão foi necessária]
 
 ## Decisão
+
 [O que foi decidido]
 
 ## Consequências
+
 [Impactos positivos e negativos]
 ```
 
@@ -565,18 +582,23 @@ app/
 ## 🎯 Regras de Ouro
 
 ### 1. "É uma Landing Page, não um ERP"
+
 Decisões devem ser proporcionais ao escopo.
 
 ### 2. "Estado local até provar que não funciona"
+
 Só então considerar estado global.
 
 ### 3. "Simplicidade documentada > Complexidade elegante"
+
 Código simples que qualquer dev entende > Padrão sofisticado que só você domina.
 
 ### 4. "Performance é feature de usuário"
+
 Animações bonitas não valem se o site é lento.
 
 ### 5. "Documentar decisões, não código óbvio"
+
 ADRs > comentários explicando `const sum = a + b;`
 
 ---

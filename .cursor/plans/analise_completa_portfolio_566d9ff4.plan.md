@@ -3,25 +3,25 @@ name: Analise Completa Portfolio
 overview: Analise tecnica completa do projeto Dennis Snellenberg Portfolio (fork) - portfolio frontend moderno sendo adaptado para uso pessoal, construido com Next.js 14, Framer Motion e Tailwind CSS.
 todos:
   - id: fix-lenis-bug
-    content: "[ALTA] Corrigir memory leak no hook use-lenis.js (cancelAnimationFrame recebe funcao ao inves de ID)"
+    content: '[ALTA] Corrigir memory leak no hook use-lenis.js (cancelAnimationFrame recebe funcao ao inves de ID)'
     status: completed
   - id: update-metadata
-    content: "[ALTA] Atualizar metadados de Dennis Snellenberg para o novo proprietario em _config/metadata.config.js"
+    content: '[ALTA] Atualizar metadados de Dennis Snellenberg para o novo proprietario em _config/metadata.config.js'
     status: completed
   - id: personalize-data
-    content: "[ALTA] Personalizar dados estaticos em _data/ (projetos, redes sociais, nav-items)"
+    content: '[ALTA] Personalizar dados estaticos em _data/ (projetos, redes sociais, nav-items)'
     status: completed
   - id: setup-cloudinary
-    content: "[MEDIA] Criar conta Cloudinary, fazer upload de imagens e configurar .env.local (quando tiver conteudo proprio)"
+    content: '[MEDIA] Criar conta Cloudinary, fazer upload de imagens e configurar .env.local (quando tiver conteudo proprio)'
     status: pending
   - id: update-image-refs
-    content: "[MEDIA] Atualizar referencias de imagem no codigo (Header, Thumbnail) para seu cloud name"
+    content: '[MEDIA] Atualizar referencias de imagem no codigo (Header, Thumbnail) para seu cloud name'
     status: pending
   - id: update-readme
-    content: "[MEDIA] Atualizar README.md com informacoes sobre ser um fork personalizado"
+    content: '[MEDIA] Atualizar README.md com informacoes sobre ser um fork personalizado'
     status: in_progress
   - id: implement-pages
-    content: "[BAIXA] Implementar conteudo real nas paginas About, Work e Contact"
+    content: '[BAIXA] Implementar conteudo real nas paginas About, Work e Contact'
     status: pending
 ---
 
@@ -199,6 +199,7 @@ app/
 2. **Bundle size:** Multiplas bibliotecas de animacao (Framer Motion + GSAP) aumentam o bundle
 3. **Dependencia de Cloudinary:** Imagens nao funcionarao sem configuracao de conta
 4. **Hook use-lenis.js:** Memory leak potencial - `cancelAnimationFrame` recebe funcao ao inves de ID:
+
 ```javascript
 // Problema em app/_hooks/use-lenis.js linha 17
 return () => cancelAnimationFrame(raf); // 'raf' e funcao, nao ID

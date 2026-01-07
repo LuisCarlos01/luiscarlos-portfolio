@@ -9,6 +9,7 @@ Esta pasta contém regras arquiteturais e de implementação que devem ser segui
 **Regras obrigatórias para implementação e refatoração**
 
 Este arquivo define:
+
 - ✅ Princípios fundamentais do projeto
 - ✅ Convenções de nomenclatura
 - ✅ Organização de pastas
@@ -18,6 +19,7 @@ Este arquivo define:
 - ✅ Checklist pré-commit
 
 **Quando usar:**
+
 - Antes de implementar nova feature
 - Ao refatorar código existente
 - Ao adicionar dependências
@@ -26,6 +28,7 @@ Este arquivo define:
 ## 🎯 Propósito
 
 Estas regras garantem que:
+
 1. **Consistência** arquitetural seja mantida
 2. **Qualidade** do código seja preservada
 3. **Simplicidade** seja priorizada
