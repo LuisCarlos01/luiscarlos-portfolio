@@ -20,7 +20,7 @@ export function UserDetails({ transformX }) {
         <div className='flex items-center gap-8'>
           <ImageWrapper>
             <CldImage
-              src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
+              src='STL-valley/hero/ThumbnailSTL'
               className='rounded-full object-cover'
               fill={true}
               quality='auto'

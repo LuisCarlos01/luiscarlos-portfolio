@@ -17,14 +17,14 @@ export function Header() {
       animate='enter'
     >
       <CldImage
-        src='Dennis-Portfolio/images/lapetmmek4fymz68m4u8'
-        className='object-cover md:scale-125 md:object-contain'
+        src='Portfolio/home/HeroSection'
+        className='object-contain'
         fill={true}
         sizes='100vw'
         quality='auto'
         format='auto'
         priority={true}
-        alt='Luis Vitoriano Personal Picture'
+        alt='Luis Vitoriano - Hero Section Portfolio'
       />
 
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
