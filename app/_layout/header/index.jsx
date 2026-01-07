@@ -21,7 +21,7 @@ export function Header() {
         className='object-cover md:scale-125 md:object-contain'
         fill={true}
         sizes='100vw'
-        alt='Dennis Snellenberg Personal Picture'
+        alt='Luis Vitoriano Personal Picture'
       />
 
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
@@ -29,7 +29,7 @@ export function Header() {
           <h1 className='text-[max(9em,15vw)]'>
             <ParallaxSlider repeat={4} baseVelocity={2}>
               <span className='pe-12'>
-                Dennis Snellenberg
+                Luis Vitoriano
                 <span className='spacer'>—</span>
               </span>
             </ParallaxSlider>
