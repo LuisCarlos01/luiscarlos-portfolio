@@ -1,6 +1,6 @@
 <div align="center">
 
-# Luis Carlos Vitorian Neto Portfolio
+# Luis Carlos Portfolio
 
 ### Modern Portfolio with Hybrid Architecture
 
@@ -41,6 +41,31 @@
 </div>
 
 ---
+
+## 🏗️ Tech Stack
+
+A modern web application built with a carefully selected technology stack:
+
+```mermaid
+graph LR
+    A[Next.js 14] --> B[React 18]
+    B --> C[Styling Layer]
+    B --> D[Animation Layer]
+    B --> E[Media Layer]
+    C --> F[Production Build]
+    D --> F
+    E --> F
+
+    C --> C1[Tailwind CSS]
+    C --> C2[Styled Components]
+    C --> C3[CSS Variables]
+
+    D --> D1[Framer Motion]
+    D --> D2[GSAP]
+    D --> D3[Lenis]
+
+    E --> E1[Cloudinary]
+```
 
 ### Core Technologies
 
