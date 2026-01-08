@@ -55,29 +55,29 @@ graph LR
     C --> F[Production Build]
     D --> F
     E --> F
-    
+
     C --> C1[Tailwind CSS]
     C --> C2[Styled Components]
     C --> C3[CSS Variables]
-    
+
     D --> D1[Framer Motion]
     D --> D2[GSAP]
     D --> D3[Lenis]
-    
+
     E --> E1[Cloudinary]
 ```
 
 ### Core Technologies
 
-| Layer | Technologies | Purpose |
-|-------|-------------|---------|
-| **Framework** | Next.js 14 + React 18 | App Router, Server Components, RSC |
-| **Styling** | Tailwind CSS + Styled Components + CVA | Hybrid approach: utility + dynamic CSS-in-JS |
-| **Animation** | Framer Motion + GSAP + Lenis | Dual system: declarative + imperative animations |
-| **Media** | Next Cloudinary | Optimized image/video delivery with transformations |
-| **Type Safety** | JSDoc | Type checking without TypeScript overhead |
-| **Package Manager** | PNPM | Fast, disk-efficient, workspace protocol |
-| **Quality** | ESLint + Stylelint + Prettier + Husky | Comprehensive linting and formatting |
+| Layer               | Technologies                           | Purpose                                             |
+| ------------------- | -------------------------------------- | --------------------------------------------------- |
+| **Framework**       | Next.js 14 + React 18                  | App Router, Server Components, RSC                  |
+| **Styling**         | Tailwind CSS + Styled Components + CVA | Hybrid approach: utility + dynamic CSS-in-JS        |
+| **Animation**       | Framer Motion + GSAP + Lenis           | Dual system: declarative + imperative animations    |
+| **Media**           | Next Cloudinary                        | Optimized image/video delivery with transformations |
+| **Type Safety**     | JSDoc                                  | Type checking without TypeScript overhead           |
+| **Package Manager** | PNPM                                   | Fast, disk-efficient, workspace protocol            |
+| **Quality**         | ESLint + Stylelint + Prettier + Husky  | Comprehensive linting and formatting                |
 
 ### Development Tools
 
@@ -99,41 +99,46 @@ graph LR
 This portfolio stands out through thoughtful architectural choices, each documented in Architecture Decision Records (ADRs):
 
 #### 🎨 **Hybrid Styling System**
+
 - **Tailwind CSS** for utility classes and rapid layout
 - **Styled Components** for dynamic, component-scoped styles
 - **CSS Variables** as design tokens shared across both systems
 - **CVA** (Class Variance Authority) for type-safe component variants
 
-*Benefits: Best of both worlds - utility-first speed + CSS-in-JS flexibility*
+_Benefits: Best of both worlds - utility-first speed + CSS-in-JS flexibility_
 
 #### ⚡ **Dual Animation System**
+
 - **Framer Motion** for declarative, React-friendly animations (page transitions, component entry/exit)
 - **GSAP** for imperative, high-performance animations (cursor follow, complex timelines)
 - **Lenis** for smooth, momentum-based scrolling
 
-*Benefits: Right tool for each animation type - performance + developer experience*
+_Benefits: Right tool for each animation type - performance + developer experience_
 
 #### 🏛️ **Design Tokens Architecture**
+
 - Centralized CSS Variables in `app/_layout/theme-provider.jsx`
 - Shared between Tailwind config and Styled Components
 - Single source of truth for colors, spacing, typography
 
-*Benefits: Consistent theming, easy customization, DRY principles*
+_Benefits: Consistent theming, easy customization, DRY principles_
 
 #### 📝 **Documentation-First Approach**
+
 - **12 Architecture Decision Records** documenting every major technical choice
 - Comprehensive documentation in `docs/` covering architecture, UI/UX, CI/CD
 - Folder structure documentation with rationale for underscore prefixes
 
-*Benefits: Maintainability, knowledge transfer, onboarding clarity*
+_Benefits: Maintainability, knowledge transfer, onboarding clarity_
 
 #### 🚀 **Production-Grade CI/CD**
+
 - Automated quality checks on every PR (ESLint, Stylelint, Prettier)
 - Preview deployments for visual validation
 - Production deployments with zero downtime
 - Dependabot for automated dependency updates
 
-*Benefits: Code quality enforcement, faster feedback loops, reliable deployments*
+_Benefits: Code quality enforcement, faster feedback loops, reliable deployments_
 
 ---
 
@@ -148,6 +153,7 @@ You can visit and explore the live portfolio at:
 ## 🔥 Features
 
 ### User Experience
+
 - ⚡ **Lightning Fast** - Optimized Next.js 14 with App Router
 - 🎨 **Smooth Animations** - Page transitions with Framer Motion
 - 🖱️ **Custom Cursor** - GSAP-powered cursor follow effect
@@ -156,6 +162,7 @@ You can visit and explore the live portfolio at:
 - 📸 **Optimized Media** - Cloudinary image/video optimization
 
 ### Developer Experience
+
 - 🏗️ **Modern Architecture** - Next.js 14 App Router with RSC
 - 🎭 **Hybrid Styling** - Tailwind + Styled Components + CVA
 - 📐 **Design System** - CSS Variables as design tokens
@@ -166,6 +173,7 @@ You can visit and explore the live portfolio at:
 - 📚 **Comprehensive Docs** - 12 ADRs + architecture documentation
 
 ### Code Quality
+
 - ✅ Linting with ESLint (JavaScript/JSX)
 - ✅ Linting with Stylelint (CSS/Styled Components)
 - ✅ Formatting with Prettier
@@ -177,13 +185,13 @@ You can visit and explore the live portfolio at:
 
 ## 📃 Pages
 
-| Route | Page | Description |
-|-------|------|-------------|
-| `/` | **Home** | Hero section with introduction and featured work |
-| `/about` | **About** | Personal information, skills, and experience |
-| `/work` | **Work** | Portfolio projects showcase |
-| `/contact` | **Contact** | Contact form and social links |
-| `*` | **404** | Custom not found page |
+| Route      | Page        | Description                                      |
+| ---------- | ----------- | ------------------------------------------------ |
+| `/`        | **Home**    | Hero section with introduction and featured work |
+| `/about`   | **About**   | Personal information, skills, and experience     |
+| `/work`    | **Work**    | Portfolio projects showcase                      |
+| `/contact` | **Contact** | Contact form and social links                    |
+| `*`        | **404**     | Custom not found page                            |
 
 <p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
 
@@ -237,23 +245,25 @@ pnpm start
 
 ### Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server |
-| `pnpm build` | Build production bundle |
-| `pnpm start` | Start production server |
-| `pnpm lint` | Run ESLint |
+| Command         | Description                     |
+| --------------- | ------------------------------- |
+| `pnpm dev`      | Start development server        |
+| `pnpm build`    | Build production bundle         |
+| `pnpm start`    | Start production server         |
+| `pnpm lint`     | Run ESLint                      |
 | `pnpm lint:fix` | Fix ESLint issues automatically |
 
 ### Troubleshooting
 
 **Port already in use?**
+
 ```bash
 # Kill process on port 3000
 npx kill-port 3000
 ```
 
 **Module not found after pulling?**
+
 ```bash
 # Clean install dependencies
 rm -rf node_modules .next
@@ -261,6 +271,7 @@ pnpm install
 ```
 
 **Cloudinary images not loading?**
+
 - Check your `.env.local` has correct `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
 - Verify images exist in your Cloudinary account
 
@@ -387,16 +398,16 @@ Contributions are what make the open source community such an amazing place to l
 
 This project follows [Conventional Commits](https://www.conventionalcommits.org/):
 
-| Type | Description | Example |
-|------|-------------|---------|
-| `feat:` | New feature | `feat: add dark mode toggle` |
-| `fix:` | Bug fix | `fix: resolve mobile menu overflow` |
-| `docs:` | Documentation only | `docs: update README installation steps` |
-| `style:` | Code style (formatting, etc.) | `style: format with prettier` |
-| `refactor:` | Code refactoring | `refactor: extract header component` |
-| `perf:` | Performance improvements | `perf: optimize image loading` |
-| `test:` | Adding/updating tests | `test: add unit tests for utils` |
-| `chore:` | Maintenance tasks | `chore: update dependencies` |
+| Type        | Description                   | Example                                  |
+| ----------- | ----------------------------- | ---------------------------------------- |
+| `feat:`     | New feature                   | `feat: add dark mode toggle`             |
+| `fix:`      | Bug fix                       | `fix: resolve mobile menu overflow`      |
+| `docs:`     | Documentation only            | `docs: update README installation steps` |
+| `style:`    | Code style (formatting, etc.) | `style: format with prettier`            |
+| `refactor:` | Code refactoring              | `refactor: extract header component`     |
+| `perf:`     | Performance improvements      | `perf: optimize image loading`           |
+| `test:`     | Adding/updating tests         | `test: add unit tests for utils`         |
+| `chore:`    | Maintenance tasks             | `chore: update dependencies`             |
 
 ### Pull Request Guidelines
 
