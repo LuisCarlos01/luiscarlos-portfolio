@@ -10,9 +10,9 @@ import {
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Home | Dennis Snellenberg',
+  title: 'Home | Luis C. Vitoriano • Mobile & Frontend Developer',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
+    'Front-End & Mobile Developer focused on building modern, scalable, and user-centric applications with React, TypeScript, and React Native. © Code by Luis',
 };
 
 export default function Home() {

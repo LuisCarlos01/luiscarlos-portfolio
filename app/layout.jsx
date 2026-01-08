@@ -1,5 +1,5 @@
 import { rootMetadata } from '@/config';
-import { neue_montreal } from '@/fonts';
+import { neue_montreal, space_grotesk } from '@/fonts';
 import { Offcanvas } from '@/layout';
 import { Providers } from '@/providers';
 import './globals.css';
@@ -10,7 +10,11 @@ export const metadata = rootMetadata;
 /** @param {import('react').PropsWithChildren<unknown>} */
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' dir='ltr' className={neue_montreal.variable}>
+    <html
+      lang='en'
+      dir='ltr'
+      className={`${neue_montreal.variable} ${space_grotesk.variable}`}
+    >
       <body className={neue_montreal.className}>
         <Providers>
           <Offcanvas />

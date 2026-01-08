@@ -6,6 +6,7 @@ import { CldImage } from 'next-cloudinary';
 
 import { ParallaxSlider } from '@/components';
 
+import { LocationBadge } from './components/location-badge';
 import { slideUp } from './variants';
 
 export function Header() {
@@ -16,35 +17,44 @@ export function Header() {
       initial='initial'
       animate='enter'
     >
+      <LocationBadge />
+
       <CldImage
-        src='Dennis-Portfolio/images/lapetmmek4fymz68m4u8'
-        className='object-cover md:scale-125 md:object-contain'
+        src='Portfolio/home/HeroSection'
+        className='object-cover object-bottom md:object-contain md:object-center'
         fill={true}
         sizes='100vw'
-        alt='Dennis Snellenberg Personal Picture'
+        quality='auto'
+        format='auto'
+        priority={true}
+        alt='Luis Vitoriano - Hero Section Portfolio'
       />
 
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
         <div className='select-none'>
           <h1 className='text-[max(9em,15vw)]'>
-            <ParallaxSlider repeat={4} baseVelocity={2}>
+            <ParallaxSlider repeat={4} baseVelocity={-2}>
               <span className='pe-12'>
-                Dennis Snellenberg
+                Luis Carlos
                 <span className='spacer'>—</span>
               </span>
             </ParallaxSlider>
           </h1>
         </div>
 
-        <div className='md:ml-auto'>
-          <div className='mx-10 max-md:my-12 md:mx-36'>
-            <div className='mb-4 md:mb-20'>
-              <MoveDownRight size={28} strokeWidth={1.25} />
+        <div className='md:absolute md:right-36 md:top-[33%] md:ml-auto md:-translate-y-1/2'>
+          <div className='m-6 sm:m-8 md:m-0'>
+            <div className='mb-3 sm:mb-4 md:mb-8'>
+              <MoveDownRight
+                size={24}
+                strokeWidth={1.25}
+                className='sm:size-7 md:size-7'
+              />
             </div>
 
-            <h4 className='text-[clamp(1.55em,2.5vw,2.75em)]'>
-              <span className='block'>Freelance</span>
-              <span className='block'>Designer &amp; Developer</span>
+            <h4 className='text-[clamp(1.25em,2.5vw,2.75em)]'>
+              <span className='block'>Software Engineer</span>
+              <span className='block'>UI/UX &amp; Development</span>
             </h4>
           </div>
         </div>

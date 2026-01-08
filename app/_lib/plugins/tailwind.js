@@ -96,6 +96,7 @@ export const tailwindPlugin = plugin(
         },
         fontFamily: {
           neue_montreal: ['var(--font-neue-montreal)'],
+          space_grotesk: ['var(--font-space-grotesk)'],
         },
         transitionDuration: {
           1500: '1500ms',

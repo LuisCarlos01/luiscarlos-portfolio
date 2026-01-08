@@ -16,6 +16,9 @@ export function ProjectSlider({ type, source }) {
         src={source}
         className='object-cover'
         fill={true}
+        quality='auto'
+        format='auto'
+        loading='lazy'
         alt='project items'
       />
     ) : null;
