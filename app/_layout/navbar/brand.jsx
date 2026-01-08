@@ -39,10 +39,10 @@ export function NavbarBrand() {
         <span className='font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
           Code by
         </span>
-        <span className='ps-1 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
+        <span className='ps-1 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-[4.5rem]'>
           Luis
         </span>
-        <span className='absolute left-28 ps-2 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-16'>
+        <span className='absolute left-28 ps-2 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-20'>
           Carlos
         </span>
       </div>
