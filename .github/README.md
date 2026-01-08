@@ -1,6 +1,6 @@
 <div align="center">
 
-# Luis Carlos Portfolio
+# Luis Carlos Vitorian Neto Portfolio
 
 ### Modern Portfolio with Hybrid Architecture
 
