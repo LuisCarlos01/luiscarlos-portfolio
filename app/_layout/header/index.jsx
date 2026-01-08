@@ -6,6 +6,7 @@ import { CldImage } from 'next-cloudinary';
 
 import { ParallaxSlider } from '@/components';
 
+import { LocationBadge } from './components/location-badge';
 import { slideUp } from './variants';
 
 export function Header() {
@@ -16,6 +17,8 @@ export function Header() {
       initial='initial'
       animate='enter'
     >
+      <LocationBadge />
+
       <CldImage
         src='Portfolio/home/HeroSection'
         className='object-contain object-bottom md:object-center'
@@ -40,9 +43,9 @@ export function Header() {
           </h1>
         </div>
 
-        <div className='md:ml-auto'>
-          <div className='mx-10 max-md:my-12 md:mx-36'>
-            <div className='mb-4 md:mb-20'>
+        <div className='md:absolute md:right-36 md:top-[33%] md:ml-auto md:-translate-y-1/2'>
+          <div className='mx-10 max-md:my-12 md:mx-0'>
+            <div className='mb-4 md:mb-8'>
               <MoveDownRight size={28} strokeWidth={1.25} />
             </div>
 

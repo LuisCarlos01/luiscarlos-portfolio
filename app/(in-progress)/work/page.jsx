@@ -3,7 +3,7 @@ import { Transition } from '@/layout';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Work | Luis Vitoriano',
+  title: 'Work | Luis C. Vitoriano • Mobile & Frontend Developer',
   description:
     'Portfolio of projects including dashboards, PWAs, landing pages, and mobile applications built with React, TypeScript, and React Native. © Code by Luis',
 };

@@ -2,7 +2,7 @@ import { Contact, Navbar, Transition } from '@/layout';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'About | Luis Vitoriano',
+  title: 'About | Luis C. Vitoriano • Mobile & Frontend Developer',
   description:
     'Front-End and Mobile Developer with a strong focus on building modern, scalable, and well-structured applications. React, TypeScript, Tailwind CSS, React Native. © Code by Luis',
 };
