@@ -148,6 +148,17 @@ You can visit and explore the live portfolio at:
 
 🔗 **[luiscarlosvn-portfolio.vercel.app](https://luiscarlosvn-portfolio.vercel.app/)**
 
+<div align="center">
+
+<img
+  src="./public/screen-record.gif"
+  loading="lazy"
+  alt="Portfolio live demo"
+  width="800"
+/>
+
+</div>
+
 ---
 
 ## 🔥 Features
