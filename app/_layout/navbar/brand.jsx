@@ -31,19 +31,19 @@ export function NavbarBrand() {
         transition: 'transform 0.2s ease-out',
       }}
     >
-      <span className='font-space_grotesk text-sm font-medium transition-transform duration-500 ease-in-expo group-hover:rotate-[360deg]'>
+      <span className='font-space_grotesk text-base font-medium transition-transform duration-500 ease-in-expo group-hover:rotate-[360deg]'>
         ©
       </span>
 
       <div className='relative ms-1 flex overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-expo group-hover:pe-8'>
-        <span className='font-space_grotesk text-base font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
+        <span className='font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
           Code by
         </span>
-        <span className='ps-1 font-space_grotesk text-base font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
+        <span className='ps-1 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
           Luis
         </span>
-        <span className='absolute left-24 ps-1 font-space_grotesk text-base font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-16'>
-          C. Vitoriano
+        <span className='absolute left-28 ps-2 font-space_grotesk text-lg font-normal transition-transform duration-500 ease-in-expo group-hover:-translate-x-16'>
+          Carlos
         </span>
       </div>
     </div>

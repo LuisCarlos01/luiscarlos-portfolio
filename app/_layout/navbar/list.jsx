@@ -14,7 +14,7 @@ export function NavbarList() {
       <li key={id} className='group p-4'>
         <Link href={href} passHref>
           <MagneticButton>
-            <span className='text-base capitalize'>{title}</span>
+            <span className='text-lg capitalize'>{title}</span>
             <Center>
               <Dot className='scale-0 transition-transform duration-200 ease-in-expo group-hover:scale-100' />
             </Center>
