@@ -146,7 +146,7 @@ _Benefits: Code quality enforcement, faster feedback loops, reliable deployments
 
 You can visit and explore the live portfolio at:
 
-🔗 **[luiscarlosvn-portfolio.vercel.app](https://luiscarlosvn-portfolio.vercel.app/)**
+🔗 **[luiscarlos-portfolio.vercel.app](https://luiscarlos-portfolio.vercel.app/)**
 
 <div align="center">
 
@@ -441,7 +441,7 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
   <a href="https://www.linkedin.com/in/luiscarlosvn">
     <img src="https://img.shields.io/badge/LinkedIn-luiscarlosvn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
-  <a href="https://luiscarlosvn-portfolio.vercel.app">
+  <a href="https://luiscarlos-portfolio.vercel.app">
     <img src="https://img.shields.io/badge/Portfolio-Live-667eea?style=for-the-badge&logo=vercel&logoColor=white"/>
   </a>
 </p>
