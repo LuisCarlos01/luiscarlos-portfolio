@@ -43,7 +43,7 @@ export function Header() {
         </div>
 
         <div className='md:absolute md:right-36 md:top-[33%] md:ml-auto md:-translate-y-1/2'>
-          <div className='m-6 sm:m-8 md:m-0'>
+          <div className='m-5 sm:m-8 md:m-0'>
             <div className='mb-3 sm:mb-4 md:mb-8'>
               <MoveDownRight
                 size={24}

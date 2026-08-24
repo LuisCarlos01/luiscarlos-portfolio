@@ -30,14 +30,14 @@ const globeVariants = {
 export const LocationBadge = memo(function LocationBadge() {
   return (
     <motion.div
-      className='absolute left-0 top-[35%] z-10 sm:top-[35%] md:top-[30%]'
+      className='absolute bottom-6 right-6 top-auto z-10 md:bottom-auto md:left-0 md:right-auto md:top-[calc(50%_-_3.25rem)]'
       variants={containerVariants}
       initial='hidden'
       animate='visible'
       aria-label='Location: Brazil'
     >
-      <div className='flex items-center gap-4 rounded-r-full bg-black/90 py-2 pl-6 pr-2 backdrop-blur-sm transition-all duration-300 hover:bg-black sm:gap-6 sm:py-3 sm:pl-8 sm:pr-3 md:gap-16 md:py-4 md:pl-12 md:pr-4'>
-        <span className='text-xs font-normal leading-tight text-white sm:text-sm md:text-base'>
+      <div className='location-badge flex items-center gap-0 rounded-full bg-transparent p-0 backdrop-blur-0 transition-all duration-300 hover:bg-transparent md:rounded-l-none md:rounded-r-full md:bg-black/90 md:backdrop-blur-sm md:hover:bg-black'>
+        <span className='hidden text-xs font-normal leading-tight text-white md:block'>
           Located
           <br />
           in the
@@ -45,7 +45,7 @@ export const LocationBadge = memo(function LocationBadge() {
           Brasil
         </span>
 
-        <div className='flex size-12 items-center justify-center rounded-full bg-secondary-foreground sm:size-14 md:size-20'>
+        <div className='location-globe flex items-center justify-center rounded-full bg-secondary-foreground'>
           <motion.div
             variants={globeVariants}
             animate='animate'
