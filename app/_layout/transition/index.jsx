@@ -13,6 +13,7 @@ import { Preloader } from './preloader';
 export function Transition({ children }) {
   const [isLoading, setLoading] = useState(true);
   const pathname = usePathname();
+  const pageName = pathname === '/' ? null : pathname.slice(1).split('/')[0];
 
   useLenis();
   useTimeOut({
@@ -27,7 +28,9 @@ export function Transition({ children }) {
   return (
     <div key={pathname} className='overflow-hidden'>
       <AnimatePresence mode='wait'>
-        {isLoading ? <Preloader /> : null}
+        {isLoading ? (
+          <Preloader word={pageName ? pageName[0].toUpperCase() + pageName.slice(1) : null} />
+        ) : null}
       </AnimatePresence>
       {children}
     </div>

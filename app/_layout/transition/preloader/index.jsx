@@ -13,7 +13,7 @@ import { fade, slideUp } from './variants';
 
 const MotionComponent = motion(Center);
 
-export function Preloader() {
+export function Preloader({ word }) {
   const [index, setIndex] = useState(0);
   const { width, height } = useDimensions();
 
@@ -60,7 +60,7 @@ export function Preloader() {
             animate='enter'
           >
             <Dot size={48} className='me-3' />
-            <p>{preloaderWords[index]}</p>
+            <p>{word ?? preloaderWords[index]}</p>
           </MotionComponent>
           <motion.svg className='absolute top-0 -z-10 h-[calc(100%+300px)] w-full'>
             <motion.path

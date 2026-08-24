@@ -11,46 +11,21 @@
 export const projectOptions = {
   first: [
     {
-      type: 'image',
-      // Barall App - Screenshot 1
-      source: 'Luis-Portfolio/images/barall-1-placeholder',
+      type: 'video',
+      // MotorFire - Project walkthrough
+      source: 'Gravação_de_Tela_2026-08-24_às_16.30.22_nd9pac',
     },
     {
       type: 'image',
+      // Payments PWA - Static preview
+      source: 'payments-pwa-1200x900-browser_etssbb',
+    },
+    {
+      type: 'video',
       // STL Valley - Shows
-      source: 'STL-valley/shows/shows',
-    },
-    {
-      type: 'image',
-      // LetxClub - Screenshot 1
-      source: 'Luis-Portfolio/images/letxclub-1-placeholder',
-    },
-    {
-      type: 'image',
-      // Buffet MVP - Slider 1 (about)
-      source: 'Buffet-mvp/about/Slider1',
+      source:
+        'https://res.cloudinary.com/dsrufta6j/video/upload/v1787601608/STL-VALLEY_ddycfv.mov',
     },
   ],
-  second: [
-    {
-      type: 'image',
-      // Barall App - Screenshot 2
-      source: 'Luis-Portfolio/images/barall-2-placeholder',
-    },
-    {
-      type: 'image',
-      // STL Valley - Hospedagem
-      source: 'STL-valley/hospedagem/cardhospedagem',
-    },
-    {
-      type: 'image',
-      // LetxClub - Screenshot 2
-      source: 'Luis-Portfolio/images/letxclub-2-placeholder',
-    },
-    {
-      type: 'image',
-      // Buffet MVP - Slider 2 (cardapio)
-      source: 'Buffet-mvp/cardapio/Slider2',
-    },
-  ],
+  second: [],
 };

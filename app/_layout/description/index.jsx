@@ -1,6 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
@@ -12,8 +14,15 @@ const phrase =
   'Front-End & Mobile Developer focused on building modern, scalable, and user-centric applications. Clean architecture, performance, and continuous learning.';
 
 export function Description() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  });
+  const aboutY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+
   return (
-    <article className='container relative'>
+    <article ref={containerRef} className='container relative'>
       <Wrapper>
         <div className='basis-full lg:basis-9/12'>
           <Title>
@@ -32,12 +41,8 @@ export function Description() {
         </div>
 
         <motion.div
-          className='flex w-full justify-end lg:absolute lg:right-0 lg:top-full lg:me-10 lg:w-auto'
-          whileInView={{ y: '-15%' }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-          }}
+          className='flex w-full justify-end lg:absolute lg:right-0 lg:top-[calc(100%-5rem)] lg:me-10 lg:w-auto'
+          style={{ y: aboutY }}
         >
           <div className='mt-8 lg:mt-0'>
             <Link href='/about' passHref>
