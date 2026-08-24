@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDownLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
 
 import { MagneticButton } from '@/components';
 
@@ -19,12 +19,11 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex items-center gap-8'>
           <ImageWrapper>
-            <CldImage
-              src='STL-valley/hero/ThumbnailSTL'
+            <Image
+              src='/profile.jpeg'
               className='rounded-full object-cover'
               fill={true}
-              quality='auto'
-              format='auto'
+              quality={75}
               loading='lazy'
               alt='Luis Vitoriano Profile Picture'
             />
@@ -56,8 +55,11 @@ export function UserDetails({ transformX }) {
 
       <Row>
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
-          <div>
-            <a href='mailto:luizcarlosvitorianoneto@gmail.com'>
+          <div className='min-w-0 flex-1'>
+            <a
+              href='mailto:luizcarlosvitorianoneto@gmail.com'
+              className='block'
+            >
               <MagneticButton
                 variant='outline'
                 size='md'
@@ -67,8 +69,8 @@ export function UserDetails({ transformX }) {
               </MagneticButton>
             </a>
           </div>
-          <div>
-            <a href='tel:+5535997080310'>
+          <div className='min-w-0 flex-1'>
+            <a href='tel:+5535997080310' className='block'>
               <MagneticButton
                 variant='outline'
                 size='md'

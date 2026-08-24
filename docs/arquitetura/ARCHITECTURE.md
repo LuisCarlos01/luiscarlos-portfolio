@@ -23,10 +23,9 @@ app/
 ├── _lib/             # Bibliotecas e plugins
 ├── _providers/       # Context providers (Styled Components, Balancer)
 ├── _utils/           # Funções utilitárias
-├── (in-progress)/    # Route group para páginas em desenvolvimento
-│   ├── about/
-│   ├── contact/
-│   └── work/
+├── about/            # Página /about
+├── contact/          # Página /contact
+├── work/             # Página /work
 ├── layout.jsx        # Layout raiz
 ├── page.jsx          # Página inicial (/)
 ├── not-found.jsx     # Página 404
@@ -35,11 +34,10 @@ app/
 
 ### Convenções
 
-| Prefixo | Significado                               | Exemplo                   |
-| ------- | ----------------------------------------- | ------------------------- |
-| `_`     | Pasta privada (não é rota)                | `_components/`, `_hooks/` |
-| `()`    | Route group (agrupa rotas sem afetar URL) | `(in-progress)/`          |
-| Nenhum  | Rota pública                              | `page.jsx` → `/`          |
+| Prefixo | Significado                 | Exemplo                   |
+| ------- | ---------------------------- | -------------------------- |
+| `_`     | Pasta privada (não é rota)  | `_components/`, `_hooks/` |
+| Nenhum  | Rota pública                | `page.jsx` → `/`          |
 
 ### Path Aliases
 
@@ -211,13 +209,13 @@ O projeto utiliza o **App Router** do Next.js 14 com roteamento baseado em arqui
 
 ### Rotas Disponíveis
 
-| Rota       | Arquivo                              | Status             |
-| ---------- | ------------------------------------ | ------------------ |
-| `/`        | `app/page.jsx`                       | Ativo              |
-| `/about`   | `app/(in-progress)/about/page.jsx`   | Em desenvolvimento |
-| `/work`    | `app/(in-progress)/work/page.jsx`    | Em desenvolvimento |
-| `/contact` | `app/(in-progress)/contact/page.jsx` | Em desenvolvimento |
-| `*`        | `app/not-found.jsx`                  | Ativo (404)        |
+| Rota       | Arquivo                | Status      |
+| ---------- | ------------------------ | ----------- |
+| `/`        | `app/page.jsx`          | Ativo       |
+| `/about`   | `app/about/page.jsx`   | Ativo       |
+| `/work`    | `app/work/page.jsx`    | Ativo       |
+| `/contact` | `app/contact/page.jsx` | Ativo       |
+| `*`        | `app/not-found.jsx`    | Ativo (404) |
 
 ### Componentes de Navegação
 

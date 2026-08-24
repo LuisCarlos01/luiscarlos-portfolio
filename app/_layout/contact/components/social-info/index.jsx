@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import Link from 'next/link';
 
 import { MagneticButton } from '@/components';
@@ -9,6 +11,26 @@ import { randomId } from '@/utils';
 import { ListTitle } from './index.styled';
 
 export function SocialInfo() {
+  const [localTime, setLocalTime] = useState(null);
+
+  useEffect(() => {
+    const updateLocalTime = () => {
+      setLocalTime(
+        new Intl.DateTimeFormat('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false,
+          timeZoneName: 'short',
+        }).format(new Date()),
+      );
+    };
+
+    updateLocalTime();
+    const intervalId = window.setInterval(updateLocalTime, 60_000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   const medias = socialMedias.map(({ href, title }) => {
     const id = randomId();
     return (
@@ -29,12 +51,12 @@ export function SocialInfo() {
         <div className='flex gap-8'>
           <div>
             <ListTitle>Version</ListTitle>
-            <p className='mt-7'>2022 © Edition</p>
+            <p className='mt-7'>{new Date().getFullYear()} © Edition</p>
           </div>
           <div>
             <ListTitle>Local time</ListTitle>
             <p className='mt-7'>
-              <time>04:01 PM GMT+2</time>
+              <time>{localTime ?? '—'}</time>
             </p>
           </div>
         </div>

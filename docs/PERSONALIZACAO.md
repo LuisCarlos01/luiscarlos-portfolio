@@ -36,9 +36,9 @@
 
 - [x] `app/_config/metadata.config.js` - Configuração raiz de SEO
 - [x] `app/page.jsx` - Metadata da homepage
-- [x] `app/(in-progress)/about/page.jsx` - Metadata da página About
-- [x] `app/(in-progress)/work/page.jsx` - Metadata da página Work
-- [x] `app/(in-progress)/contact/page.jsx` - Metadata da página Contact
+- [x] `app/about/page.jsx` - Metadata da página About
+- [x] `app/work/page.jsx` - Metadata da página Work
+- [x] `app/contact/page.jsx` - Metadata da página Contact
 - [x] `app/not-found.jsx` - Metadata da página 404
 - [x] `package.json` - Nome do projeto, autor e keywords
 

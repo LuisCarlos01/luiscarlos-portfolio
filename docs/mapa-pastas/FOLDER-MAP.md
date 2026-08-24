@@ -81,10 +81,10 @@ app/
 ├── _utils/                 # Funções utilitárias
 │   └── helpers/            # Helpers (class-name, random-id)
 │
-├── (in-progress)/          # Páginas em desenvolvimento
-│   ├── about/              # /about
-│   ├── contact/            # /contact
-│   └── work/               # /work
+├── about/                  # /about
+├── contact/                # /contact
+├── work/                   # /work
+│   └── _components/        # Componentes privados da rota
 │
 ├── layout.jsx              # Layout raiz
 ├── page.jsx                # Home (/)
