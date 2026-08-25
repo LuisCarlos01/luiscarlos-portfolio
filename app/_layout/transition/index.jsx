@@ -29,7 +29,11 @@ export function Transition({ children }) {
     <div key={pathname} className='overflow-hidden'>
       <AnimatePresence mode='wait'>
         {isLoading ? (
-          <Preloader word={pageName ? pageName[0].toUpperCase() + pageName.slice(1) : null} />
+          <Preloader
+            word={
+              pageName ? pageName[0].toUpperCase() + pageName.slice(1) : null
+            }
+          />
         ) : null}
       </AnimatePresence>
       {children}

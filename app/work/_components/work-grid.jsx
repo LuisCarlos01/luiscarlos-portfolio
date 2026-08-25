@@ -61,9 +61,10 @@ export function WorkGrid() {
             {filter}
             {filter !== 'All' && (
               <sup className='ms-1 text-xs'>
-                {thumbnailOptions.filter(
-                  project => project.filter === filter,
-                ).length}
+                {
+                  thumbnailOptions.filter(project => project.filter === filter)
+                    .length
+                }
               </sup>
             )}
           </button>

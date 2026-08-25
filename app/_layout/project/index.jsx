@@ -16,29 +16,33 @@ export function Project() {
   const { transformX1, transformX2, transformY } =
     useProjectSlider(containerRef);
 
-  const firstSlider = projectOptions.first.map(({ type, source, cloudName }) => {
-    const id = randomId();
-    return (
-      <ProjectSlider
-        key={id}
-        type={type}
-        source={source}
-        cloudName={cloudName}
-      />
-    );
-  });
+  const firstSlider = projectOptions.first.map(
+    ({ type, source, cloudName }) => {
+      const id = randomId();
+      return (
+        <ProjectSlider
+          key={id}
+          type={type}
+          source={source}
+          cloudName={cloudName}
+        />
+      );
+    },
+  );
 
-  const secondSlider = projectOptions.second.map(({ type, source, cloudName }) => {
-    const id = randomId();
-    return (
-      <ProjectSlider
-        key={id}
-        type={type}
-        source={source}
-        cloudName={cloudName}
-      />
-    );
-  });
+  const secondSlider = projectOptions.second.map(
+    ({ type, source, cloudName }) => {
+      const id = randomId();
+      return (
+        <ProjectSlider
+          key={id}
+          type={type}
+          source={source}
+          cloudName={cloudName}
+        />
+      );
+    },
+  );
 
   return (
     <section ref={containerRef} className='relative z-10 mt-14'>

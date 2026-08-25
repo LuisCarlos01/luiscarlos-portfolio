@@ -22,8 +22,7 @@ export const ThumbnailModal = forwardRef(
       active,
       index,
       imageClassName = 'object-cover',
-      className =
-        'pointer-events-none fixed left-1/2 top-1/2 aspect-[2/1] w-[min(80vw,40rem)] overflow-hidden rounded bg-[#949899] p-6',
+      className = 'pointer-events-none fixed left-1/2 top-1/2 aspect-[2/1] w-[min(80vw,40rem)] overflow-hidden rounded bg-[#949899] p-6',
       ...props
     },
     ref,
