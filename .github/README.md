@@ -1,491 +1,178 @@
-<div align="center">
+# Documentação do Projeto
 
-# Luis Carlos Portfolio
+Bem-vindo à documentação completa do Luis Carlos Portfolio.
 
-### Modern Portfolio with Hybrid Architecture
+## 📂 Estrutura de Documentação
 
-<p>
-  <strong>Next.js 14</strong> • <strong>Hybrid Styling</strong> (Tailwind + Styled Components) • <strong>Dual Animations</strong> (Framer Motion + GSAP)
-</p>
+### 🏗️ [Arquitetura](./arquitetura/ARCHITECTURE.md)
 
-<p>
+Visão geral da arquitetura do projeto, decisões técnicas e estrutura de pastas.
 
-![GitHub top language](https://img.shields.io/github/languages/top/LuisCarlos01/dennis-snellenberg-portfolio?style=flat&color=667eea)&nbsp;
-![GitHub last commit](https://img.shields.io/github/last-commit/LuisCarlos01/dennis-snellenberg-portfolio?style=flat&color=667eea)&nbsp;
-![CI Status](https://img.shields.io/github/actions/workflow/status/LuisCarlos01/dennis-snellenberg-portfolio/ci.yml?label=CI&logo=github&style=flat&color=667eea)&nbsp;
-![CD Status](https://img.shields.io/github/actions/workflow/status/LuisCarlos01/dennis-snellenberg-portfolio/cd.yml?label=Deploy&logo=vercel&style=flat&color=667eea)&nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/LuisCarlos01/dennis-snellenberg-portfolio?style=flat&color=764ba2)&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/LuisCarlos01/dennis-snellenberg-portfolio?style=flat&color=764ba2)
+### 🧠 [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md)
 
-</p>
+Análise completa dos princípios arquiteturais aplicados, boas práticas, anti-patterns e recomendações para evolução do projeto.
 
-<p>
+### 📝 [ADRs (Architecture Decision Records)](./adr/README.md)
 
-[Tech Stack](#-tech-stack) •
-[Why This Portfolio](#-why-this-portfolio) •
-[Demo](#-demo) •
-[Features](#-features) •
-[Getting Started](#-getting-started) •
-[Documentation](#-documentation) •
-[CI/CD](#-cicd) •
-[Contributing](#-contributing)
+Registro de todas as decisões arquiteturais importantes do projeto:
 
-</p>
+- [ADR-001: Next.js 14 App Router](./adr/ADR-001-nextjs-14-app-router.md)
+- [ADR-002: Estilização Híbrida](./adr/ADR-002-estilizacao-hibrida.md)
+- [ADR-003: Design Tokens CSS Variables](./adr/ADR-003-design-tokens-css-variables.md)
+- [ADR-004: Animações Framer Motion + GSAP](./adr/ADR-004-animacoes-framer-motion-gsap.md)
+- [ADR-005: Scroll Suave com Lenis](./adr/ADR-005-scroll-suave-lenis.md)
+- [ADR-006: Mídia com Cloudinary](./adr/ADR-006-midia-cloudinary.md)
+- [ADR-007: Tipografia Font Local](./adr/ADR-007-tipografia-font-local.md)
+- [ADR-008: Organização Pastas Underscore](./adr/ADR-008-organizacao-pastas-underscore.md)
+- [ADR-009: Utilitário Classes CVA](./adr/ADR-009-utilitario-classes-cva.md)
+- [ADR-010: Tipagem JSDoc](./adr/ADR-010-tipagem-jsdoc.md)
+- [ADR-011: Qualidade Código Linting](./adr/ADR-011-qualidade-codigo-linting.md)
+- [ADR-012: Package Manager PNPM](./adr/ADR-012-package-manager-pnpm.md)
 
-<img
-  src="./public/screen-record.gif"
-  loading="lazy"
-  alt="Portfolio demo animation"
-/>
+### 🚀 [CI/CD Setup](./CI-CD-SETUP/README.md)
 
-</div>
+Documentação completa sobre Integração e Deploy Contínuos:
 
----
+- [Guia de Setup](./CI-CD-SETUP/CI-CD-SETUP.md)
+- [Checklist de Produção](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md)
+- [Variáveis de Ambiente](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md)
 
-## 🏗️ Tech Stack
+### ☁️ [Estratégia Cloudinary](./cloudinary/README.md)
 
-A modern web application built with a carefully selected technology stack:
+Guia completo de uso otimizado do Cloudinary no plano Free, incluindo organização de assets, transformações, monitoramento e boas práticas para minimizar consumo de créditos.
 
-```mermaid
-graph LR
-    A[Next.js 14] --> B[React 18]
-    B --> C[Styling Layer]
-    B --> D[Animation Layer]
-    B --> E[Media Layer]
-    C --> F[Production Build]
-    D --> F
-    E --> F
+- [Estratégia Cloudinary Free](./cloudinary/cloudinary-strategy.md)
+- [Sumário de Implementação](./cloudinary/cloudinary-implementation-summary.md)
 
-    C --> C1[Tailwind CSS]
-    C --> C2[Styled Components]
-    C --> C3[CSS Variables]
+### 🎨 [UI/UX](./UI-UX/UI-UX.md)
 
-    D --> D1[Framer Motion]
-    D --> D2[GSAP]
-    D --> D3[Lenis]
+Guia de design, componentes e padrões visuais do projeto.
 
-    E --> E1[Cloudinary]
-```
+### 🗺️ [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md)
 
-### Core Technologies
+Estrutura detalhada de diretórios e organização dos arquivos.
 
-| Layer               | Technologies                           | Purpose                                             |
-| ------------------- | -------------------------------------- | --------------------------------------------------- |
-| **Framework**       | Next.js 14 + React 18                  | App Router, Server Components, RSC                  |
-| **Styling**         | Tailwind CSS + Styled Components + CVA | Hybrid approach: utility + dynamic CSS-in-JS        |
-| **Animation**       | Framer Motion + GSAP + Lenis           | Dual system: declarative + imperative animations    |
-| **Media**           | Next Cloudinary                        | Optimized image/video delivery with transformations |
-| **Type Safety**     | JSDoc                                  | Type checking without TypeScript overhead           |
-| **Package Manager** | PNPM                                   | Fast, disk-efficient, workspace protocol            |
-| **Quality**         | ESLint + Stylelint + Prettier + Husky  | Comprehensive linting and formatting                |
+### 📋 [Briefing](./briefing/BRIEFING.md)
 
-### Development Tools
+Informações sobre o projeto, objetivos e contexto.
 
-![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![PNPM](https://img.shields.io/badge/PNPM-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+### ⚙️ [Personalização](./PERSONALIZACAO.md)
 
----
+Guia para personalizar o portfolio com suas informações.
 
-## ✨ Why This Portfolio?
+## 🚀 Quick Links
 
-### Unique Architecture Decisions
+### Para Desenvolvedores
 
-This portfolio stands out through thoughtful architectural choices, each documented in Architecture Decision Records (ADRs):
+- **Começando**: [README Principal](../README.md)
+- **Setup Local**: [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md)
+- **Variáveis**: [Environment Variables](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md)
+- **Personalizar**: [Guia de Personalização](./PERSONALIZACAO.md)
 
-#### 🎨 **Hybrid Styling System**
+### Para Manutenção
 
-- **Tailwind CSS** for utility classes and rapid layout
-- **Styled Components** for dynamic, component-scoped styles
-- **CSS Variables** as design tokens shared across both systems
-- **CVA** (Class Variance Authority) for type-safe component variants
+- **CI/CD**: [Workflows](./CI-CD-SETUP/README.md)
+- **Deploy**: [Production Checklist](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md)
+- **Cloudinary**: [Estratégia de Otimização](./cloudinary/README.md)
+- **Arquitetura**: [Architecture Overview](./arquitetura/ARCHITECTURE.md)
+- **Análise**: [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md)
+- **Decisões**: [ADRs](./adr/README.md)
 
-_Benefits: Best of both worlds - utility-first speed + CSS-in-JS flexibility_
+## 📖 Ordem de Leitura Recomendada
 
-#### ⚡ **Dual Animation System**
+### 1️⃣ Para Novos Desenvolvedores
 
-- **Framer Motion** for declarative, React-friendly animations (page transitions, component entry/exit)
-- **GSAP** for imperative, high-performance animations (cursor follow, complex timelines)
-- **Lenis** for smooth, momentum-based scrolling
+1. [README Principal](../README.md) - Visão geral
+2. [Arquitetura](./arquitetura/ARCHITECTURE.md) - Entender a estrutura
+3. [Análise Arquitetural](./analise-archsoftware/analise-arquitetural.md) - Princípios e boas práticas
+4. [Mapa de Pastas](./mapa-pastas/FOLDER-MAP.md) - Onde está cada coisa
+5. [UI/UX](./UI-UX/UI-UX.md) - Padrões visuais
+6. [Estratégia Cloudinary](./cloudinary/cloudinary-strategy.md) - Otimização de mídia
+7. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar ambiente
 
-_Benefits: Right tool for each animation type - performance + developer experience_
+### 2️⃣ Para Personalizar
 
-#### 🏛️ **Design Tokens Architecture**
+1. [Personalização](./PERSONALIZACAO.md) - Guia completo
+2. [Estratégia Cloudinary](./cloudinary/cloudinary-strategy.md) - Upload e organização de imagens
+3. [Environment Variables](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md) - Configurar vars
+4. [Briefing](./briefing/BRIEFING.md) - Contexto do projeto
 
-- Centralized CSS Variables in `app/_layout/theme-provider.jsx`
-- Shared between Tailwind config and Styled Components
-- Single source of truth for colors, spacing, typography
+### 3️⃣ Para Deploy
 
-_Benefits: Consistent theming, easy customization, DRY principles_
+1. [Environment Variables](./CI-CD-SETUP/ENVIRONMENT-VARIABLES.md) - Setup vars
+2. [Production Checklist](./CI-CD-SETUP/PRODUCTION-CHECKLIST.md) - Checklist completo
+3. [CI/CD Setup](./CI-CD-SETUP/CI-CD-SETUP.md) - Configurar pipelines
 
-#### 📝 **Documentation-First Approach**
-
-- **12 Architecture Decision Records** documenting every major technical choice
-- Comprehensive documentation in `docs/` covering architecture, UI/UX, CI/CD
-- Folder structure documentation with rationale for underscore prefixes
-
-_Benefits: Maintainability, knowledge transfer, onboarding clarity_
-
-#### 🚀 **Production-Grade CI/CD**
-
-- Automated quality checks on every PR (ESLint, Stylelint, Prettier)
-- Preview deployments for visual validation
-- Production deployments with zero downtime
-- Dependabot for automated dependency updates
-
-_Benefits: Code quality enforcement, faster feedback loops, reliable deployments_
-
----
-
-## ✨ Demo
-
-You can visit and explore the live portfolio at:
-
-🔗 **[luiscarlos-portfolio.vercel.app](https://luiscarlos-portfolio.vercel.app/)**
-
-<div align="center">
-
-<img
-  src="./public/screen-record.gif"
-  loading="lazy"
-  alt="Portfolio live demo"
-  width="800"
-/>
-
-</div>
-
----
-
-## 🔥 Features
-
-### User Experience
-
-- ⚡ **Lightning Fast** - Optimized Next.js 14 with App Router
-- 🎨 **Smooth Animations** - Page transitions with Framer Motion
-- 🖱️ **Custom Cursor** - GSAP-powered cursor follow effect
-- 📱 **Fully Responsive** - Mobile-first design approach
-- 🌊 **Smooth Scrolling** - Lenis momentum scrolling
-- 📸 **Optimized Media** - Cloudinary image/video optimization
-
-### Developer Experience
-
-- 🏗️ **Modern Architecture** - Next.js 14 App Router with RSC
-- 🎭 **Hybrid Styling** - Tailwind + Styled Components + CVA
-- 📐 **Design System** - CSS Variables as design tokens
-- 📝 **Type Safety** - JSDoc annotations throughout
-- 🧪 **Quality Gates** - ESLint, Stylelint, Prettier, Husky
-- 📦 **PNPM** - Fast and efficient package management
-- 🤖 **GitHub Actions** - Automated CI/CD pipelines
-- 📚 **Comprehensive Docs** - 12 ADRs + architecture documentation
-
-### Code Quality
-
-- ✅ Linting with ESLint (JavaScript/JSX)
-- ✅ Linting with Stylelint (CSS/Styled Components)
-- ✅ Formatting with Prettier
-- ✅ Pre-commit hooks with Husky + lint-staged
-- ✅ Conventional Commits enforcement
-- ✅ PR templates and issue templates
-
----
-
-## 📃 Pages
-
-| Route      | Page        | Description                                      |
-| ---------- | ----------- | ------------------------------------------------ |
-| `/`        | **Home**    | Hero section with introduction and featured work |
-| `/about`   | **About**   | Personal information, skills, and experience     |
-| `/work`    | **Work**    | Portfolio projects showcase                      |
-| `/contact` | **Contact** | Contact form and social links                    |
-| `*`        | **404**     | Custom not found page                            |
-
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-
-- **Node.js** 18.x or 20.x (recommended: 20.11.0 as per `.nvmrc`)
-- **PNPM** 8.x (`npm install -g pnpm`)
-- **Git**
-
-### Quick Start
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/LuisCarlos01/dennis-snellenberg-portfolio.git
-cd dennis-snellenberg-portfolio
-
-# 2. Install dependencies
-pnpm install
-
-# 3. Set up environment variables
-cp .env.example .env.local
-# Edit .env.local with your Cloudinary credentials
-
-# 4. Start development server
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser 🎉
-
-### Environment Variables
-
-This project requires environment variables for Cloudinary integration. See [`.env.example`](.env.example) for required variables.
-
-For detailed setup instructions, see [`docs/ci-cd-setup/ENVIRONMENT-VARIABLES.md`](docs/ci-cd-setup/ENVIRONMENT-VARIABLES.md).
-
-### Build for Production
-
-```bash
-# Build optimized production bundle
-pnpm build
-
-# Start production server locally
-pnpm start
-```
-
-### Scripts
-
-| Command         | Description                     |
-| --------------- | ------------------------------- |
-| `pnpm dev`      | Start development server        |
-| `pnpm build`    | Build production bundle         |
-| `pnpm start`    | Start production server         |
-| `pnpm lint`     | Run ESLint                      |
-| `pnpm lint:fix` | Fix ESLint issues automatically |
-
-### Troubleshooting
-
-**Port already in use?**
-
-```bash
-# Kill process on port 3000
-npx kill-port 3000
-```
-
-**Module not found after pulling?**
-
-```bash
-# Clean install dependencies
-rm -rf node_modules .next
-pnpm install
-```
-
-**Cloudinary images not loading?**
-
-- Check your `.env.local` has correct `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
-- Verify images exist in your Cloudinary account
-
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
-
----
-
-## 📚 Documentation
-
-This project maintains comprehensive documentation for architecture, decisions, and processes:
+## 🏗️ Estrutura do Projeto
 
 ```
 docs/
-├── 🏗️  arquitetura/
-│   └── ARCHITECTURE.md           # System architecture overview
-├── 📝  adr/                       # Architecture Decision Records
-│   ├── ADR-001-nextjs-14-app-router.md
-│   ├── ADR-002-estilizacao-hibrida.md
-│   ├── ADR-003-design-tokens-css-variables.md
-│   ├── ADR-004-animacoes-framer-motion-gsap.md
-│   ├── ADR-005-scroll-suave-lenis.md
-│   ├── ADR-006-midia-cloudinary.md
-│   ├── ADR-007-tipografia-font-local.md
-│   ├── ADR-008-organizacao-pastas-underscore.md
-│   ├── ADR-009-utilitario-classes-cva.md
-│   ├── ADR-010-tipagem-jsdoc.md
-│   ├── ADR-011-qualidade-codigo-linting.md
-│   └── ADR-012-package-manager-pnpm.md
-├── 🗺️  mapa-pastas/
-│   └── FOLDER-MAP.md             # Project structure explanation
-├── 🎨  ui-ux/
-│   └── UI-UX.md                  # Design system and UX guidelines
-├── 🚀  ci-cd-setup/
-│   ├── CI-CD-SETUP.md            # CI/CD pipeline documentation
-│   ├── ENVIRONMENT-VARIABLES.md  # Environment setup guide
-│   ├── GITHUB-SECRETS.md         # GitHub secrets configuration
-│   └── PRODUCTION-CHECKLIST.md   # Pre-deployment checklist
-└── 📋  briefing/
-    └── BRIEFING.md               # Project briefing and overview
+├── adr/                      # Architecture Decision Records
+│   ├── ADR-001-*.md
+│   ├── ADR-002-*.md
+│   └── README.md
+├── arquitetura/              # Documentação de arquitetura
+│   └── ARCHITECTURE.md
+├── analise-archsoftware/     # Análise arquitetural
+│   └── analise-arquitetural.md
+├── briefing/                 # Briefing do projeto
+│   └── BRIEFING.md
+├── CI-CD-SETUP/             # Documentação CI/CD
+│   ├── CI-CD-SETUP.md
+│   ├── PRODUCTION-CHECKLIST.md
+│   ├── ENVIRONMENT-VARIABLES.md
+│   └── README.md
+├── mapa-pastas/             # Mapa da estrutura
+│   └── FOLDER-MAP.md
+├── UI-UX/                   # Design e UX
+│   └── UI-UX.md
+├── PERSONALIZACAO.md        # Guia de personalização
+└── README.md                # Você está aqui
 ```
 
-### Key Documentation
+## 🔍 Busca Rápida
 
-- **[Architecture Overview](docs/arquitetura/ARCHITECTURE.md)** - System design and technical decisions
-- **[ADR Index](docs/adr/README.md)** - All architecture decision records
-- **[Folder Structure](docs/mapa-pastas/FOLDER-MAP.md)** - Project organization explained
-- **[UI/UX Guidelines](docs/ui-ux/UI-UX.md)** - Design system documentation
-- **[CI/CD Setup](docs/ci-cd-setup/CI-CD-SETUP.md)** - Complete deployment guide
+### Stack Tecnológica
 
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
+- **Framework**: Next.js 14 ([ADR-001](./adr/ADR-001-nextjs-14-app-router.md))
+- **Linguagem**: JavaScript + JSDoc ([ADR-010](./adr/ADR-010-tipagem-jsdoc.md))
+- **Styling**: TailwindCSS + Styled Components ([ADR-002](./adr/ADR-002-estilizacao-hibrida.md))
+- **Animações**: Framer Motion + GSAP ([ADR-004](./adr/ADR-004-animacoes-framer-motion-gsap.md))
+- **Scroll**: Lenis ([ADR-005](./adr/ADR-005-scroll-suave-lenis.md))
+- **Package Manager**: PNPM ([ADR-012](./adr/ADR-012-package-manager-pnpm.md))
 
----
+### Comandos Úteis
 
-## 🔄 CI/CD
+```bash
+# Desenvolvimento
+pnpm dev
 
-This project uses **GitHub Actions** for continuous integration and deployment to Vercel.
+# Build
+pnpm build
+
+# Linting
+pnpm lint
+
+# Produção local
+pnpm start
+```
 
 ### Workflows
 
-#### 🧪 CI Pipeline ([`.github/workflows/ci.yml`](.github/workflows/ci.yml))
+- **CI**: `.github/workflows/ci.yml` - Validação
+- **CD**: `.github/workflows/cd.yml` - Deploy
 
-Runs on every push and pull request:
+## 📞 Contato e Suporte
 
-- **Quality Checks**: ESLint, Stylelint, Prettier validation
-- **Build Validation**: Production build test
-- **Multi-version Testing**: Node.js 18.x and 20.x
-
-#### 🚀 CD Pipeline ([`.github/workflows/cd.yml`](.github/workflows/cd.yml))
-
-Automated deployments:
-
-- **Preview Deployments**: Every PR gets a unique preview URL
-- **Production Deployment**: Automatic deploy on merge to `main`
-- **Vercel Integration**: Uses Vercel CLI for zero-downtime deployments
-
-### Setting Up CI/CD for Your Fork
-
-For detailed setup instructions, see the complete guide at [`docs/ci-cd-setup/CI-CD-SETUP.md`](docs/ci-cd-setup/CI-CD-SETUP.md).
-
-**Quick Setup:**
-
-1. Configure GitHub Secrets (see [`docs/ci-cd-setup/GITHUB-SECRETS.md`](docs/ci-cd-setup/GITHUB-SECRETS.md))
-2. Link your Vercel project
-3. Enable branch protection rules
-4. Configure Dependabot (already set up in `.github/dependabot.yml`)
-
-### Branch Protection
-
-Recommended settings for `main` branch:
-
-- ✅ Require pull request before merging
-- ✅ Require status checks to pass: `Quality Checks`, `Build Validation`
-- ✅ Require conversation resolution before merging
-- ✅ Require linear history
-
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**!
-
-### How to Contribute
-
-1. **Fork** the project
-2. **Create** your feature branch
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit** your changes using [Conventional Commits](https://www.conventionalcommits.org/)
-   ```bash
-   git commit -m "feat: add some amazing feature"
-   ```
-4. **Push** to your branch
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open** a Pull Request (use the [PR template](.github/pull_request_template.md))
-6. **Wait** for CI checks to pass (ESLint, Stylelint, build validation)
-7. **Request** review from maintainers
-
-### Commit Message Convention
-
-This project follows [Conventional Commits](https://www.conventionalcommits.org/):
-
-| Type        | Description                   | Example                                  |
-| ----------- | ----------------------------- | ---------------------------------------- |
-| `feat:`     | New feature                   | `feat: add dark mode toggle`             |
-| `fix:`      | Bug fix                       | `fix: resolve mobile menu overflow`      |
-| `docs:`     | Documentation only            | `docs: update README installation steps` |
-| `style:`    | Code style (formatting, etc.) | `style: format with prettier`            |
-| `refactor:` | Code refactoring              | `refactor: extract header component`     |
-| `perf:`     | Performance improvements      | `perf: optimize image loading`           |
-| `test:`     | Adding/updating tests         | `test: add unit tests for utils`         |
-| `chore:`    | Maintenance tasks             | `chore: update dependencies`             |
-
-### Pull Request Guidelines
-
-- PRs automatically trigger CI checks and preview deployments
-- All checks must pass before merging
-- Keep PRs focused and small for easier review
-- Update documentation if needed
-- Add screenshots for UI changes
-
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
-
----
-
-## 🔗 Connect
-
-<p align="left">
-  <a href="https://github.com/LuisCarlos01">
-    <img src="https://img.shields.io/badge/GitHub-LuisCarlos01-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-  <a href="https://www.linkedin.com/in/luiscarlosvn">
-    <img src="https://img.shields.io/badge/LinkedIn-luiscarlosvn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="https://luiscarlos-portfolio.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-Live-667eea?style=for-the-badge&logo=vercel&logoColor=white"/>
-  </a>
-</p>
-
----
+- **Repositório**: [GitHub](https://github.com/luiscarlosvn/dennis-snellenberg-portfolio)
+- **Issues**: [Abrir Issue](https://github.com/luiscarlosvn/dennis-snellenberg-portfolio/issues)
+- **Maintainer**: [@luiscarlosvn](https://github.com/luiscarlosvn)
 
 ## 📄 License
 
-This project is open source and available under the **MIT License**.
+Este projeto é open source sob a licença MIT.
 
 ---
 
-## 🙏 Acknowledgments
-
-This portfolio is inspired by the exceptional design work of [**Dennis Snellenberg**](https://dennissnellenberg.com/).
-
-Original template created by [**Ali Bagheri**](https://github.com/AliBagheri2079/dennis-snellenberg-portfolio).
-
-Adapted and enhanced by [**Luis Carlos**](https://github.com/LuisCarlos01) with architectural improvements and comprehensive documentation.
-
----
-
-## 💝 Support This Project
-
-If you find this project helpful or inspiring:
-
-- ⭐ **Star** this repository
-- 🍴 **Fork** it for your own use
-- 🐛 **Report** bugs or suggest features via [Issues](https://github.com/LuisCarlos01/dennis-snellenberg-portfolio/issues)
-- 🔀 **Contribute** via Pull Requests
-- 📢 **Share** it with others
-
-Your support helps keep this project maintained and improved! ❤️
-
-<p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
-
----
-
-<div align="center">
-
-**Built with ❤️ using Next.js, React, and modern web technologies**
-
-![Made with Next.js](https://img.shields.io/badge/Made_with-Next.js-000000?style=flat&logo=next.js&logoColor=white)
-![Made with React](https://img.shields.io/badge/Made_with-React-61DAFB?style=flat&logo=react&logoColor=black)
-![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)
-
-</div>
+**Última atualização**: Janeiro 2026  
+**Versão da Documentação**: 1.0.0
