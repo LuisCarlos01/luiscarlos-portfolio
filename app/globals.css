@@ -9,16 +9,23 @@
 
 .location-globe {
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4.2em;
+  height: 4.2em;
   font-size: inherit;
   overflow: hidden;
+  color: #fff;
+}
+
+.location-globe__icon {
+  width: 3em;
+  height: 3em;
+  font-size: 0.8em;
 }
 
 @media (min-width: 768px) {
   .location-badge {
     gap: 3.78em;
-    padding: 1em 0.9em 1em 2.5em;
+    padding: 0.9em 0.9em 0.9em 2.5em;
     font-size: clamp(16px, 1.2vw, 19px);
   }
 
@@ -27,9 +34,180 @@
     line-height: 1.2;
   }
 
-  .location-globe {
-    width: 4.2em;
-    height: 4.2em;
+  .digital-globe.location-globe__icon {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+.about-digital-ball {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(9em, 12vw, 11em);
+  height: clamp(9em, 12vw, 11em);
+  overflow: hidden;
+  border-radius: 50%;
+  background: #455ce9;
+  color: #fff;
+  font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  transform: translate(-20%, -50%);
+}
+
+.about-digital-ball__overlay {
+  position: absolute;
+  inset: 0;
+  background: #455ce9;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: about-digital-ball-color 6s ease-in-out infinite;
+}
+
+.about-digital-ball:hover .about-digital-ball__overlay {
+  opacity: 1;
+}
+
+.digital-globe {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.digital-globe__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.125em currentColor;
+  transform: translate(-50%, -50%) rotate(15deg);
+  animation: digital-globe-sway 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+}
+
+.digital-globe__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0.1em 0 0 0.08em currentColor;
+  font-size: 0.75em;
+  transform: translate(-50%, -50%);
+  animation: digital-globe-meridian 2.7s linear infinite;
+}
+
+.digital-globe__circle:nth-child(1) {
+  animation-delay: -1.8s;
+}
+
+.digital-globe__circle:nth-child(2) {
+  animation-delay: -0.9s;
+}
+
+.digital-globe__circle-horizontal,
+.digital-globe__circle-horizontal-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  font-size: 0.75em;
+  transform: translate(-50%, -50%);
+}
+
+.digital-globe__circle-horizontal {
+  height: 55%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.15em currentColor;
+}
+
+.digital-globe__circle-horizontal-middle {
+  height: 0.15em;
+  background: currentColor;
+}
+
+.about-profile-globe {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@keyframes about-digital-ball-color {
+  0%,
+  100% {
+    background: #455ce9;
+  }
+
+  50% {
+    background: #ff4444;
+  }
+}
+
+@keyframes digital-globe-sway {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(15deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-15deg);
+  }
+}
+
+@keyframes digital-globe-meridian {
+  0% {
+    width: 100%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: inset 0.1em 0 0 0.08em currentColor;
+  }
+
+  49% {
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: inset 0.1em 0 0 0.08em currentColor;
+  }
+
+  50% {
+    width: 0.175em;
+    border-radius: 0;
+    background: currentColor;
+  }
+
+  51% {
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: inset -0.1em 0 0 0.08em currentColor;
+  }
+
+  100% {
+    width: 100%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: inset -0.1em 0 0 0.08em currentColor;
+  }
+}
+
+@media (min-width: 1001px) {
+  .about-digital-ball {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-digital-ball__overlay,
+  .digital-globe__wrap,
+  .digital-globe__circle {
+    animation: none;
   }
 }
 

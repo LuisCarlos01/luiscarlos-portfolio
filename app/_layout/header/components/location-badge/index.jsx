@@ -3,7 +3,8 @@
 import { memo } from 'react';
 
 import { motion } from 'framer-motion';
-import { Globe } from 'lucide-react';
+
+import { DigitalGlobe } from '@/components';
 
 // Variants definidas fora do componente para evitar recriação
 const containerVariants = {
@@ -12,17 +13,6 @@ const containerVariants = {
     opacity: 1,
     x: 0,
     transition: { duration: 0.6, delay: 0.8 },
-  },
-};
-
-const globeVariants = {
-  animate: {
-    rotate: 360,
-    transition: {
-      duration: 20,
-      repeat: Infinity,
-      ease: 'linear',
-    },
   },
 };
 
@@ -46,18 +36,7 @@ export const LocationBadge = memo(function LocationBadge() {
         </span>
 
         <div className='location-globe flex items-center justify-center rounded-full bg-secondary-foreground'>
-          <motion.div
-            variants={globeVariants}
-            animate='animate'
-            style={{ willChange: 'transform' }}
-          >
-            <Globe
-              size={24}
-              strokeWidth={1.5}
-              className='text-white sm:size-7 md:size-10'
-              aria-hidden='true'
-            />
-          </motion.div>
+          <DigitalGlobe className='location-globe__icon' />
         </div>
       </div>
     </motion.div>

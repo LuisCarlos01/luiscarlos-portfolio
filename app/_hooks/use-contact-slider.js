@@ -11,6 +11,11 @@ export function useContactSlider(element) {
 
   const transformX = useTransform(scrollYProgress, [0, 1], [-50, 50]);
   const transformY = useTransform(scrollYProgress, [0, 1], [-50, 50]);
+  const revealTransformY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [-373, 427],
+  );
 
-  return { transformX, transformY };
+  return { revealTransformY, transformX, transformY };
 }
